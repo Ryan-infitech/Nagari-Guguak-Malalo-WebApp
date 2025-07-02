@@ -1,70 +1,77 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Calendar, User, ArrowRight, Eye } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, ArrowRight, Eye } from "lucide-react";
 
 const NewsSection = () => {
   const news = [
     {
-      id: 1,
-      title: 'Pembukaan Festival Danau GuguakMalalo 2024',
-      excerpt: 'Festival tahunan terbesar dengan berbagai pertunjukan seni budaya Minangkabau dan pameran produk UMKM lokal',
-      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80',
-      date: '15 Januari 2024',
-      author: 'Admin Nagari',
-      views: '1,245',
-      category: 'Event',
-      featured: true
+      id: "1",
+      title: "Pawai obor dan tolak bala bersama warga nagari guguakmalalo",
+      excerpt:
+        "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo.",
+      image: "/IMG_1097.JPG",
+      date: "15 Januari 2024",
+      author: "Admin Nagari",
+      views: "1,245",
+      category: "Event",
+      featured: true,
     },
     {
-      id: 2,
-      title: 'Launching Platform E-Commerce UMKM GuguakMalalo',
-      excerpt: 'Platform digital baru untuk mempromosikan dan menjual produk-produk UMKM nagari ke pasar yang lebih luas',
-      image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80',
-      date: '12 Januari 2024',
-      author: 'Tim Digital',
-      views: '856',
-      category: 'Ekonomi'
+      id: "2",
+      title: "Launching Platform E-Commerce UMKM GuguakMalalo",
+      excerpt:
+        "Platform digital baru untuk mempromosikan dan menjual produk-produk UMKM nagari ke pasar yang lebih luas",
+      image:
+        "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80",
+      date: "12 Januari 2024",
+      author: "Tim Digital",
+      views: "856",
+      category: "Ekonomi",
     },
     {
-      id: 3,
-      title: 'Program Pemberdayaan Kelompok Tani Organik',
-      excerpt: 'Pelatihan dan bantuan untuk pengembangan pertanian organik berkelanjutan di kawasan perbukitan',
-      image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80',
-      date: '10 Januari 2024',
-      author: 'Dinas Pertanian',
-      views: '634',
-      category: 'Pertanian'
+      id: "3",
+      title: "Program Pemberdayaan Kelompok Tani Organik",
+      excerpt:
+        "Pelatihan dan bantuan untuk pengembangan pertanian organik berkelanjutan di kawasan perbukitan",
+      image:
+        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80",
+      date: "10 Januari 2024",
+      author: "Dinas Pertanian",
+      views: "634",
+      category: "Pertanian",
     },
     {
-      id: 4,
-      title: 'Infrastruktur Jalan Menuju Objek Wisata Diperbaiki',
-      excerpt: 'Perbaikan dan peningkatan akses jalan untuk mendukung pengembangan sektor pariwisata nagari',
-      image: 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80',
-      date: '8 Januari 2024',
-      author: 'Dinas PU',
-      views: '923',
-      category: 'Infrastruktur'
-    }
+      id: "4",
+      title: "Infrastruktur Jalan Menuju Objek Wisata Diperbaiki",
+      excerpt:
+        "Perbaikan dan peningkatan akses jalan untuk mendukung pengembangan sektor pariwisata nagari",
+      image:
+        "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80",
+      date: "8 Januari 2024",
+      author: "Dinas PU",
+      views: "923",
+      category: "Infrastruktur",
+    },
   ];
 
   const announcements = [
     {
-      title: 'Pendaftaran Bantuan Sosial Tahun 2024',
-      date: '20 Januari 2024',
-      type: 'Pengumuman Penting'
+      title: "Pendaftaran Bantuan Sosial Tahun 2024",
+      date: "20 Januari 2024",
+      type: "Pengumuman Penting",
     },
     {
-      title: 'Jadwal Pelayanan Administrasi Hari Libur',
-      date: '18 Januari 2024',
-      type: 'Informasi Layanan'
+      title: "Jadwal Pelayanan Administrasi Hari Libur",
+      date: "18 Januari 2024",
+      type: "Informasi Layanan",
     },
     {
-      title: 'Sosialisasi Program Desa Digital',
-      date: '16 Januari 2024',
-      type: 'Kegiatan'
-    }
+      title: "Sosialisasi Program Desa Digital",
+      date: "16 Januari 2024",
+      type: "Kegiatan",
+    },
   ];
 
   return (
@@ -87,7 +94,10 @@ const NewsSection = () => {
 
             {/* Featured News */}
             {news.slice(0, 1).map((item) => (
-              <Card key={item.id} className="mb-8 overflow-hidden shadow-xl border-0 hover:shadow-2xl transition-all duration-500">
+              <Card
+                key={item.id}
+                className="mb-8 overflow-hidden shadow-xl border-0 hover:shadow-2xl transition-all duration-500"
+              >
                 <div className="relative">
                   <img
                     src={item.image}
@@ -105,16 +115,18 @@ const NewsSection = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 hover:text-green-600 transition-colors cursor-pointer">
-                    {item.title}
-                  </h3>
-                  
+                  <Link to={`/informasi/berita/${item.id}`}>
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 hover:text-green-600 transition-colors cursor-pointer">
+                      {item.title}
+                    </h3>
+                  </Link>
+
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {item.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-1">
@@ -138,7 +150,10 @@ const NewsSection = () => {
             {/* News Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {news.slice(1).map((item) => (
-                <Card key={item.id} className="overflow-hidden shadow-lg border-0 hover:shadow-xl transition-all duration-300 group">
+                <Card
+                  key={item.id}
+                  className="overflow-hidden shadow-lg border-0 hover:shadow-xl transition-all duration-300 group"
+                >
                   <div className="relative">
                     <img
                       src={item.image}
@@ -151,16 +166,18 @@ const NewsSection = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-5">
-                    <h3 className="font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors cursor-pointer line-clamp-2">
-                      {item.title}
-                    </h3>
-                    
+                    <Link to={`/informasi/berita/${item.id}`}>
+                      <h3 className="font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors cursor-pointer line-clamp-2">
+                        {item.title}
+                      </h3>
+                    </Link>
+
                     <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                       {item.excerpt}
                     </p>
-                    
+
                     <div className="flex items-center justify-between text-xs text-gray-500">
                       <div className="flex items-center space-x-1">
                         <Calendar className="h-3 w-3" />
@@ -185,15 +202,20 @@ const NewsSection = () => {
                 <div className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></div>
                 Pengumuman Penting
               </h3>
-              
+
               <div className="space-y-4">
                 {announcements.map((announcement, index) => (
-                  <div key={index} className="border-l-4 border-green-500 pl-4 py-2 hover:bg-green-50 transition-colors cursor-pointer">
+                  <div
+                    key={index}
+                    className="border-l-4 border-green-500 pl-4 py-2 hover:bg-green-50 transition-colors cursor-pointer"
+                  >
                     <h4 className="font-semibold text-gray-800 text-sm mb-1">
                       {announcement.title}
                     </h4>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-500">{announcement.date}</span>
+                      <span className="text-xs text-gray-500">
+                        {announcement.date}
+                      </span>
                       <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
                         {announcement.type}
                       </span>
@@ -201,7 +223,7 @@ const NewsSection = () => {
                   </div>
                 ))}
               </div>
-              
+
               <Link to="/pengumuman">
                 <Button variant="outline" className="w-full mt-4">
                   Lihat Semua Pengumuman
@@ -212,7 +234,7 @@ const NewsSection = () => {
             {/* Quick Stats */}
             <Card className="p-6 shadow-lg border-0 bg-gradient-to-br from-green-500 to-blue-500 text-white">
               <h3 className="text-xl font-bold mb-4">Statistik Nagari</h3>
-              
+
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Total Penduduk</span>

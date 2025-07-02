@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +9,7 @@ import LayananDigital from "./pages/LayananDigital";
 import UMKM from "./pages/UMKM";
 import Pariwisata from "./pages/Pariwisata";
 import InformasiPublik from "./pages/InformasiPublik";
+import BeritaDetail from "./pages/BeritaDetail";
 import Kontak from "./pages/Kontak";
 import PortalWarga from "./pages/PortalWarga";
 import NotFound from "./pages/NotFound";
@@ -29,6 +29,7 @@ const App = () => (
           <Route path="/umkm" element={<UMKM />} />
           <Route path="/pariwisata" element={<Pariwisata />} />
           <Route path="/informasi" element={<InformasiPublik />} />
+          <Route path="/informasi/berita/:id" element={<BeritaDetail />} />
           <Route path="/kontak" element={<Kontak />} />
           <Route path="/portal-warga" element={<PortalWarga />} />
           <Route path="*" element={<NotFound />} />

@@ -78,7 +78,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/tanahdatar.png"
+              src="/logobaru.png"
               alt="Logo Tanah Datar"
               className="h-12 w-auto"
             />
@@ -179,9 +179,11 @@ const Navbar = () => {
               Kontak
             </Link>
 
-            <Button className="bg-gradient-to-r from-[#7ca186] to-blue-600 hover:from-[#6a8b72] hover:to-blue-700 text-white">
-              Portal Warga
-            </Button>
+            <Link to="/portal-warga">
+              <Button className="bg-gradient-to-r from-[#7ca186] to-blue-600 hover:from-[#6a8b72] hover:to-blue-700 text-white">
+                Portal Warga
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -236,9 +238,11 @@ const Navbar = () => {
               >
                 Kontak
               </Link>
-              <Button className="bg-gradient-to-r from-[#7ca186] to-blue-600 w-fit">
-                Portal Warga
-              </Button>
+              <Link to="/portal-warga">
+                <Button className="bg-gradient-to-r from-[#7ca186] to-blue-600 w-fit">
+                  Portal Warga
+                </Button>
+              </Link>
             </div>
           </div>
         )}

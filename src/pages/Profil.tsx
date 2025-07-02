@@ -14,8 +14,11 @@ const Profil = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-[#7ca186] to-blue-600 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section
+        className="relative py-20 bg-cover bg-center text-white"
+        style={{ backgroundImage: "url('/kantorwali.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#7ca186]/80 to-blue-600/80"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Profil Nagari GuguakMalalo
@@ -174,5 +177,4 @@ const Profil = () => {
   );
 };
 
-export default Profil;
 export default Profil;
