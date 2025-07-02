@@ -238,11 +238,11 @@ const NewsSection = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span>Total Penduduk</span>
-                  <span className="font-bold text-xl">15,432</span>
+                  <span className="font-bold text-xl">4256</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>Kepala Keluarga</span>
-                  <span className="font-bold text-xl">4,127</span>
+                  <span className="font-bold text-xl">1064</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span>UMKM Aktif</span>

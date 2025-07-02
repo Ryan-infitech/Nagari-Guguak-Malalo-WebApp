@@ -51,11 +51,11 @@ const HeroSection = () => {
         <div className="flex flex-wrap justify-center gap-8 mb-10 animate-fade-in">
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
             <Users className="h-5 w-5 text-[#7ca186]" />
-            <span className="font-semibold">15,432 Penduduk</span>
+            <span className="font-semibold">4256 Penduduk</span>
           </div>
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
             <MapPin className="h-5 w-5 text-blue-400" />
-            <span className="font-semibold">87.5 km² Luas</span>
+            <span className="font-semibold">52.38 km² Luas</span>
           </div>
           <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
             <Calendar className="h-5 w-5 text-[#7ca186]" />
