@@ -20,7 +20,7 @@ const WelcomeMessage = () => {
                 <div className="relative">
                   <div className="w-full max-w-md mx-auto">
                     <img
-                      src="/IMG-20250527-WA0010.png"
+                      src="/fotopakwali.png"
                       alt="Wali Nagari GuguakMalalo - Mulyadi"
                       className="w-full h-auto rounded-lg shadow-lg object-cover"
                     />
