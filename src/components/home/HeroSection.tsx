@@ -19,7 +19,7 @@ const HeroSection = () => {
           {/* Fallback image in case video fails to load */}
           <img
             src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80"
-            alt="Pemandangan GuguakMalalo"
+            alt="Pemandangan Guguak Malalo"
             className="w-full h-full object-cover"
           />
         </video>
@@ -34,10 +34,10 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
           <span className="block">Selamat Datang di</span>
-          <span className="block bg-gradient-to-r from-[#7ca186] via-blue-400 to-[#7ca186] bg-clip-text text-transparent">
-            Nagari GuguakMalalo
+          <span className="block bg-gradient-to-r from-[#7ca186] via-blue-400 to-[#7ca186] bg-clip-text text-transparent px-2 py-2">
+            Nagari Guguak Malalo
           </span>
         </h1>
 

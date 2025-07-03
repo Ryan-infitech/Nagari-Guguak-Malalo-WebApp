@@ -50,7 +50,7 @@ const Navbar = () => {
                 <MapPin className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="text-xs md:text-sm">
                   <span className="hidden sm:inline">
-                    Nagari GuguakMalalo,{" "}
+                    Nagari Guguak Malalo,{" "}
                   </span>
                   <span>Kab. Tanah Datar</span>
                 </span>
@@ -84,7 +84,7 @@ const Navbar = () => {
             />
             <div>
               <h1 className="text-xl font-bold text-gray-800">
-                Nagari GuguakMalalo
+                Nagari Guguak Malalo
               </h1>
               <p className="text-sm text-[#7ca186]">Portal Digital Nagari</p>
             </div>
