@@ -171,8 +171,7 @@ const LayananDigital = () => {
       <section
         className="relative py-20 bg-cover bg-center text-white"
         style={{
-          backgroundImage:
-            "url('https://lumbungdata.id/wp-content/uploads/2025/02/10-layanan-teknoogi-desa.jpg')",
+          backgroundImage: "url('/layanan.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#7ca186]/80 to-blue-600/80"></div>

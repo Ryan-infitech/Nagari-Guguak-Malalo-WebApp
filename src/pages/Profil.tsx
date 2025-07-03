@@ -40,14 +40,14 @@ const Profil = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-[#7ca186] to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-gray-800">15,432</div>
+              <div className="text-3xl font-bold text-gray-800">4256</div>
               <div className="text-gray-600">Penduduk</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-gray-800">87.5</div>
+              <div className="text-3xl font-bold text-gray-800">52.38</div>
               <div className="text-gray-600">km² Luas</div>
             </div>
             <div className="text-center">
@@ -61,7 +61,7 @@ const Profil = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Droplets className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-gray-800">3</div>
+              <div className="text-3xl font-bold text-gray-800">1</div>
               <div className="text-gray-600">Danau Besar</div>
             </div>
           </div>
@@ -216,11 +216,11 @@ const Profil = () => {
               </div>
               <div className="flex items-center justify-center bg-gray-50 p-3 rounded-lg">
                 <Map className="h-4 w-4 text-blue-600 mr-2" />
-                <span>Luas Wilayah: 87.5 km²</span>
+                <span>Luas Wilayah: 52.38 km²</span>
               </div>
               <div className="flex items-center justify-center bg-gray-50 p-3 rounded-lg">
                 <Users className="h-4 w-4 text-green-600 mr-2" />
-                <span>4 Jorong (Dusun)</span>
+                <span>3 Jorong (Dusun)</span>
               </div>
             </div>
           </Card>
@@ -242,7 +242,7 @@ const Profil = () => {
             <div className="org-chart relative">
               {/* Mobile Note */}
               <div className="md:hidden text-center text-sm text-gray-500 mb-6">
-                <p>Scroll horizontally to view the complete structure</p>
+                <p>Scroll ke kanan/kiri</p>
               </div>
 
               <div className="overflow-x-auto pb-4">
