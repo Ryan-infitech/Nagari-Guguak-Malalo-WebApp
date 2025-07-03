@@ -322,7 +322,7 @@ const Profil = () => {
                         {
                           name: "FIDRIANIS,S.Pd",
                           title: "KEPALA URUSAN TU DAN UMUM",
-                          photo: "/images/struktur/12.png",
+                          photo: "/images/struktur/11.png",
                         },
                         {
                           name: "HADIYATI M.S.E",

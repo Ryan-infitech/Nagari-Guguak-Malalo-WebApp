@@ -24,7 +24,7 @@ import {
 const newsArticles = [
   {
     id: "1",
-    title: "Pembukaan Festival Danau GuguakMalalo 2024 Sukses Digelar",
+    title: "Syiar Muharram: Semangat Kebersamaan Masyarakat Guguak Malalo Dalam Pawai Obor",
     content: `
       <p class="mb-4">GUGUAKMALALO - Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo. Kegiatan tradisional ini menjadi momen penting bagi warga dalam memohon perlindungan dan keselamatan bagi kampung halaman mereka.</p>
       
@@ -57,53 +57,89 @@ const newsArticles = [
   },
   {
     id: "2",
-    title: "Launching Platform E-Commerce UMKM GuguakMalalo",
+    title: "Wali Nagari Guguak Malalo Cup II Resmi Digelar di Lapangan Pelita Limo Luhak, Batipuh Selatan",
+    content: `
+      <p class="mb-4">BATIPUH SELATAN - Turnamen sepak bola bergengsi Wali Nagari Guguak Malalo Cup II resmi digelar pada Sabtu, 28 Juni 2025, bertempat di Lapangan Pelita Limo Luhak, Nagari Guguak Malalo, Kecamatan Batipuh Selatan, Kabupaten Tanah Datar. Kegiatan ini menjadi ajang silaturahmi dan unjuk kemampuan para tim sepak bola lokal sekaligus menjadi bagian dari rangkaian kegiatan olahraga dan kepemudaan Nagari Guguak Malalo.</p>
+
+      <p class="mb-4">Kompetisi yang mempertemukan berbagai tim kuat dari Sumatera Barat ini terdiri atas dua jalur pertandingan utama, yaitu Guguak Malalo Cup II dan pertandingan antar tim dalam rangka Wali Nagari Cup. Kegiatan ini diinisiasi oleh pemerintah nagari bersama para pemuda, dan didukung penuh oleh masyarakat serta perangkat nagari setempat.</p>
+
+      <p class="mb-4">Dalam Guguak Malalo Cup II, sejumlah tim dari berbagai daerah turut ambil bagian, di antaranya UD.AM FC dari Solok, PERSIKOTA FC dari Tanah Datar, TALUK FC dari Lintau, PERSIGURA FC dari Gunung Rajo, PSSP FC dari Paninjauan, PORSMA FC dari Sumani, BADARMAS A dari Malalo, dan PANDEKA FC dari Solok. Pertandingan penyisihan dimulai sejak tanggal 27 Juni hingga 8 Juli 2025, dengan laga-laga sengit yang akan menentukan siapa yang berhak melaju ke babak final.</p>
+
+      <p class="mb-4">Sementara itu, dalam Wali Nagari Guguak Malalo Cup, turut bertanding tim-tim pilihan seperti TARANTANG FC dari Ladang Laweh, KEMER FC dari Tanah Datar, ROYAL FC dari Bukittinggi, EXCELLENT FC dari Tanah Datar, RINTIS FC dari Singgalang, GMR FC dari Tanah Datar, SANDI UTAMA dari Batipuh, dan BADARMAS B dari Malalo. Jalur ini juga menyajikan atmosfer kompetisi yang tinggi dan antusiasme penonton yang luar biasa.</p>
+
+      <p class="mb-4">Turnamen ini tidak hanya menjadi panggung kompetisi olahraga, tetapi juga menjadi ruang kebersamaan dan hiburan bagi masyarakat, serta ajang untuk memperkuat rasa kebanggaan terhadap nagari. Kehadiran para suporter, pemuda, dan tokoh masyarakat membuat suasana semakin semarak. Melalui kegiatan ini, pemerintah nagari berharap dapat terus mendorong semangat sportivitas, kerja sama, dan kreativitas generasi muda.</p>
+
+      <p class="mb-4">Wali Nagari Guguak Malalo bersama seluruh panitia berharap kegiatan ini dapat berjalan lancar, damai, dan memberikan dampak positif bagi seluruh peserta serta masyarakat luas. Babak final dijadwalkan berlangsung pada 20 Juli 2025, dan menjadi puncak dari seluruh rangkaian turnamen yang penuh semangat juang dan nilai kebersamaan.</p>
+    `,
     excerpt:
-      "Platform digital baru untuk mempromosikan dan menjual produk-produk UMKM nagari ke pasar yang lebih luas",
+      "Turnamen sepak bola bergengsi Wali Nagari Guguak Malalo Cup II resmi digelar pada Sabtu, 28 Juni 2025, bertempat di Lapangan Pelita Limo Luhak, Nagari Guguak Malalo, Kecamatan Batipuh Selatan, Kabupaten Tanah Datar.",
     image:
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80",
-    date: "12 Januari 2024",
+      "/walnagcup.png",
+    date: "28 Juni 2025",
     author: "Tim Digital",
     authorImage: "/tanahdatar.png",
     views: "856",
     likes: "45",
     comments: "8",
-    category: "Ekonomi",
-    tags: ["Digital", "UMKM", "E-Commerce"],
+    category: "Olahraga",
+    tags: ["Digital", "Olahraga", "Sport"],
     featured: false,
   },
   {
     id: "3",
-    title: "Program Pemberdayaan Kelompok Tani Organik",
+    title: "Pembangunan Jalan Guguak Sarai–Sikala Diresmikan Melalui Gotong Royong Warga di Jorong Baing, Guguak Malalo",
     excerpt:
-      "Pelatihan dan bantuan untuk pengembangan pertanian organik berkelanjutan di kawasan perbukitan",
-    image:
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80",
-    date: "10 Januari 2024",
-    author: "Dinas Pertanian",
+      "Sabtu, 28 Juni 2025, menjadi hari bersejarah bagi masyarakat Jorong Baing, Nagari Guguak Malalo, Kecamatan Batipuh Selatan. Pembangunan jalan penghubung antara Guguak Sarai dan Sikala resmi dimulai melalui kegiatan gotong royong yang melibatkan partisipasi luas dari masyarakat, pemerintah nagari, serta mahasiswa Kuliah Kerja Nyata (KKN).",
+    content: `
+      <p class="mb-4">Proyek infrastruktur yang dibiayai melalui Dana Desa ini merupakan bagian dari komitmen Wali Nagari Guguak Malalo, Bapak Mulyadi, untuk meningkatkan aksesibilitas dan konektivitas antarwilayah di nagari. Jalan ini diharapkan mampu memperlancar aktivitas sosial dan ekonomi warga, khususnya dalam mendukung kegiatan pertanian dan mobilitas harian masyarakat Jorong Baing.</p>
+
+      <p class="mb-4">Pengerjaan jalan dilaksanakan secara gotong royong yang dipimpin langsung oleh wali nagari bersama perangkat nagari, serta diikuti oleh puluhan warga dari berbagai latar belakang. Suasana penuh semangat dan kebersamaan begitu terasa sejak pagi hari. Warga membawa perlengkapan kerja secara swadaya, menunjukkan semangat kolektif dan kepedulian terhadap kemajuan nagari mereka.</p>
+
+      <p class="mb-4">Kegiatan ini turut diperkuat oleh kehadiran mahasiswa KKN dari Universitas Negeri Padang (UNP) dan UIN Mahmud Yunus Batusangkar, yang ikut serta membantu proses pembangunan bersama masyarakat. Para mahasiswa ini tidak hanya terlibat secara fisik, namun juga menjadi bagian dari integrasi sosial dan edukasi pembangunan berbasis pemberdayaan.</p>
+
+      <p class="mb-4">Dalam sambutannya, Bapak Mulyadi menyampaikan apresiasi dan rasa bangganya atas kekompakan masyarakat Jorong Baing. Ia menegaskan bahwa pembangunan jalan ini tidak sekadar proyek fisik, tetapi simbol dari tekad bersama untuk membangun nagari secara berkelanjutan dengan semangat gotong royong. “Ini adalah wujud nyata bagaimana dana desa dimanfaatkan untuk kepentingan bersama dan dijalankan dengan prinsip partisipatif,” ujarnya.</p>
+
+      <p class="mb-4">Warga menyambut baik pembangunan ini, karena selama ini jalan tersebut merupakan jalur vital yang belum tertangani secara optimal. Dengan dibukanya akses jalan Guguak Sarai–Sikala, masyarakat berharap dapat lebih mudah dalam mengangkut hasil tani, menjangkau layanan pendidikan dan kesehatan, serta mempererat hubungan antarwilayah yang sebelumnya cukup terisolasi.</p>
+
+      <p class="mb-4">Pembangunan jalan ini menjadi bukti nyata bahwa kolaborasi antara pemerintah, masyarakat, dan lembaga pendidikan dapat menghasilkan perubahan signifikan bagi kemajuan nagari. Harapannya, kegiatan serupa dapat terus berlanjut di sektor pembangunan lainnya sebagai bentuk perwujudan visi Guguak Malalo yang mandiri, produktif, dan berdaya saing tinggi.</p>
+    `,
+    image: "/pembangunanjalan.jpg",
+    date: "28 Juni 2025",
+    author: "Admin Nagari",
     authorImage: "/tanahdatar.png",
     views: "634",
     likes: "39",
     comments: "5",
-    category: "Pertanian",
-    tags: ["Pertanian", "Organik", "Pelatihan"],
+    category: "Pembangunan",
+    tags: ["Pembangunan", "Infrastruktur", "Gotong Royong"],
     featured: false,
   },
   {
     id: "4",
-    title: "Infrastruktur Jalan Menuju Objek Wisata Diperbaiki",
+    title: "Anak KKN UNP bersama Pemuda Jorong Baing Melakukan Pemijahan Ikan Bilih untuk Menjaga Kelangsungan",
     excerpt:
-      "Perbaikan dan peningkatan akses jalan untuk mendukung pengembangan sektor pariwisata nagari",
+      "Dalam rangka melestarikan dan mengatasi kelangkaan ikan bilih, kelompok KKN UNP bersama pemuda Jorong Baing melakukan kegiatan pemijahan ikan bilih secara berkelanjutan di perairan sekitar Guguak Malalo.",
+    content: `
+      <p class="mb-4">JORONG BAING - Pada Rabu, 2 Juli 2025, sekelompok mahasiswa Kuliah Kerja Nyata (KKN) dari Universitas Negeri Padang (UNP) bersama pemuda Jorong Baing, Nagari Guguak Malalo, Kecamatan Batipuh Selatan, mengadakan kegiatan pemijahan ikan bilih. Kegiatan ini bertujuan untuk melestarikan ikan endemik Danau Singkarak tersebut sekaligus mengatasi potensi kelangkaan yang mulai dirasakan masyarakat.</p>
+
+      <p class="mb-4">Ikan bilih (Mystacoleucus padangensis) merupakan salah satu kekayaan hayati yang menjadi ciri khas dan sumber penghidupan sebagian masyarakat sekitar Danau Singkarak. Namun, dalam beberapa tahun terakhir, populasi ikan bilih mulai mengalami penurunan akibat penangkapan berlebihan dan degradasi habitat.</p>
+
+      <p class="mb-4">Kegiatan pemijahan ini dilakukan secara manual dengan metode tradisional yang dibimbing oleh masyarakat yang telah berpengalaman dalam budidaya ikan bilih. Mahasiswa KKN UNP bersama pemuda setempat turut membersihkan kolam, menyiapkan media pemijahan, serta membantu proses pemijahan ikan bilih yang dilakukan secara alami.</p>
+
+      <p class="mb-4">Inisiatif ini juga menjadi bagian dari edukasi lingkungan yang diusung oleh mahasiswa KKN, sekaligus membangun kesadaran kolektif masyarakat untuk menjaga keberlanjutan sumber daya alam lokal. Selain itu, kegiatan ini diharapkan mampu memberikan dampak ekonomi melalui peningkatan populasi ikan bilih yang dapat dimanfaatkan secara berkelanjutan oleh warga sekitar.</p>
+
+      <p class="mb-4">Pemerintah nagari menyambut baik kegiatan ini dan berharap ke depan akan semakin banyak kolaborasi serupa yang mendorong pelestarian lingkungan dan pemberdayaan masyarakat lokal. Kegiatan pemijahan ikan bilih ini menjadi langkah awal untuk membangun kesadaran ekologis dan menjaga identitas lingkungan Nagari Guguak Malalo.</p>
+    `,
     image:
-      "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=800&q=80",
-    date: "8 Januari 2024",
-    author: "Dinas PU",
+      "/pemijahanikan.jpg",
+    date: "2 Juli 2025",
+    author: "Admin Nagari",
     authorImage: "/tanahdatar.png",
     views: "923",
-    likes: "67",
-    comments: "15",
-    category: "Infrastruktur",
-    tags: ["Infrastruktur", "Pariwisata", "Pembangunan"],
+    likes: "51",
+    comments: "7",
+    category: "Lingkungan",
+    tags: ["Lingkungan", "Ikan Bilih", "Pelestarian"],
     featured: false,
   },
 ];

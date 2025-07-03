@@ -23,36 +23,47 @@ const InformasiPublik = () => {
   const beritaTerbaru = [
     {
       id: "1",
-      judul: "Pembangunan Jalan Desa Fase II Dimulai",
-      tanggal: "25 Januari 2024",
-      kategori: "Pembangunan",
+      judul:
+        "Syiar Muharram: Semangat Kebersamaan Masyarakat Guguak Malalo Dalam Pawai Obor",
+      tanggal: "2 Juli 2025",
+      kategori: "Event",
       ringkasan:
-        "Proyek pembangunan jalan desa fase II telah dimulai dengan anggaran Rp 2.5 miliar dari APBN Nagari",
-      views: 245,
-      image:
-        "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=200&fit=crop",
+        "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo.",
+      views: 1245,
+      image: "/IMG_1097.JPG",
     },
     {
       id: "2",
-      judul: "Festival Budaya Guguak Malalo 2024",
-      tanggal: "20 Januari 2024",
-      kategori: "Budaya",
+      judul:
+        "Wali Nagari Guguak Malalo Cup II Resmi Digelar di Lapangan Pelita Limo Luhak, Batipuh Selatan",
+      tanggal: "28 Juni 2025",
+      kategori: "Olahraga",
       ringkasan:
-        "Persiapan Festival Budaya Guguak Malalo 2024 telah memasuki tahap final dengan berbagai pertunjukan menarik",
-      views: 432,
-      image:
-        "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=200&fit=crop",
+        "Turnamen sepak bola bergengsi Wali Nagari Guguak Malalo Cup II resmi digelar pada Sabtu, 28 Juni 2025, bertempat di Lapangan Pelita Limo Luhak, Nagari Guguak Malalo, Kecamatan Batipuh Selatan, Kabupaten Tanah Datar.",
+      views: 856,
+      image: "/walnagcup.png",
     },
     {
       id: "3",
-      judul: "Program Bantuan UMKM Gelombang III",
-      tanggal: "18 Januari 2024",
-      kategori: "Ekonomi",
+      judul:
+        "Pembangunan Jalan Guguak Sarai–Sikala Diresmikan Melalui Gotong Royong Warga di Jorong Baing, Guguak Malalo",
+      tanggal: "28 Juni 2025",
+      kategori: "Pembangunan",
       ringkasan:
-        "Nagari Guguak Malalo meluncurkan program bantuan UMKM gelombang ketiga dengan total bantuan Rp 500 juta",
-      views: 189,
-      image:
-        "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=200&fit=crop",
+        "Sabtu, 28 Juni 2025, menjadi hari bersejarah bagi masyarakat Jorong Baing, Nagari Guguak Malalo, Kecamatan Batipuh Selatan. Pembangunan jalan penghubung antara Guguak Sarai dan Sikala resmi dimulai melalui kegiatan gotong royong yang melibatkan partisipasi luas dari masyarakat, pemerintah nagari, serta mahasiswa Kuliah Kerja Nyata (KKN).",
+      views: 634,
+      image: "/pembangunanjalan.jpg",
+    },
+    {
+      id: "4",
+      judul:
+        "Anak KKN UNP bersama Pemuda Jorong Baing Melakukan Pemijahan Ikan Bilih untuk Menjaga Kelangsungan",
+      tanggal: "2 Juli 2025",
+      kategori: "Lingkungan",
+      ringkasan:
+        "Dalam rangka melestarikan dan mengatasi kelangkaan ikan bilih, kelompok KKN UNP bersama pemuda Jorong Baing melakukan kegiatan pemijahan ikan bilih secara berkelanjutan di perairan sekitar Guguak Malalo.",
+      views: 923,
+      image: "/pemijahanikan.jpg",
     },
   ];
 
