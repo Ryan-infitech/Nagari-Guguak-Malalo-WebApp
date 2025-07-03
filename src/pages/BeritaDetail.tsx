@@ -24,7 +24,8 @@ import {
 const newsArticles = [
   {
     id: "1",
-    title: "Syiar Muharram: Semangat Kebersamaan Masyarakat Guguak Malalo Dalam Pawai Obor",
+    title:
+      "Syiar Muharram: Semangat Kebersamaan Masyarakat Guguak Malalo Dalam Pawai Obor",
     content: `
       <p class="mb-4">GUGUAKMALALO - Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo. Kegiatan tradisional ini menjadi momen penting bagi warga dalam memohon perlindungan dan keselamatan bagi kampung halaman mereka.</p>
       
@@ -57,7 +58,8 @@ const newsArticles = [
   },
   {
     id: "2",
-    title: "Wali Nagari Guguak Malalo Cup II Resmi Digelar di Lapangan Pelita Limo Luhak, Batipuh Selatan",
+    title:
+      "Wali Nagari Guguak Malalo Cup II Resmi Digelar di Lapangan Pelita Limo Luhak, Batipuh Selatan",
     content: `
       <p class="mb-4">BATIPUH SELATAN - Turnamen sepak bola bergengsi Wali Nagari Guguak Malalo Cup II resmi digelar pada Sabtu, 28 Juni 2025, bertempat di Lapangan Pelita Limo Luhak, Nagari Guguak Malalo, Kecamatan Batipuh Selatan, Kabupaten Tanah Datar. Kegiatan ini menjadi ajang silaturahmi dan unjuk kemampuan para tim sepak bola lokal sekaligus menjadi bagian dari rangkaian kegiatan olahraga dan kepemudaan Nagari Guguak Malalo.</p>
 
@@ -73,8 +75,7 @@ const newsArticles = [
     `,
     excerpt:
       "Turnamen sepak bola bergengsi Wali Nagari Guguak Malalo Cup II resmi digelar pada Sabtu, 28 Juni 2025, bertempat di Lapangan Pelita Limo Luhak, Nagari Guguak Malalo, Kecamatan Batipuh Selatan, Kabupaten Tanah Datar.",
-    image:
-      "/walnagcup.png",
+    image: "/walnagcup.png",
     date: "28 Juni 2025",
     author: "Tim Digital",
     authorImage: "/tanahdatar.png",
@@ -87,7 +88,8 @@ const newsArticles = [
   },
   {
     id: "3",
-    title: "Pembangunan Jalan Guguak Sarai–Sikala Diresmikan Melalui Gotong Royong Warga di Jorong Baing, Guguak Malalo",
+    title:
+      "Pembangunan Jalan Guguak Sarai–Sikala Diresmikan Melalui Gotong Royong Warga di Jorong Baing, Guguak Malalo",
     excerpt:
       "Sabtu, 28 Juni 2025, menjadi hari bersejarah bagi masyarakat Jorong Baing, Nagari Guguak Malalo, Kecamatan Batipuh Selatan. Pembangunan jalan penghubung antara Guguak Sarai dan Sikala resmi dimulai melalui kegiatan gotong royong yang melibatkan partisipasi luas dari masyarakat, pemerintah nagari, serta mahasiswa Kuliah Kerja Nyata (KKN).",
     content: `
@@ -116,7 +118,8 @@ const newsArticles = [
   },
   {
     id: "4",
-    title: "Anak KKN UNP bersama Pemuda Jorong Baing Melakukan Pemijahan Ikan Bilih untuk Menjaga Kelangsungan",
+    title:
+      "Anak KKN UNP bersama Pemuda Jorong Baing Melakukan Pemijahan Ikan Bilih untuk Menjaga Kelangsungan",
     excerpt:
       "Dalam rangka melestarikan dan mengatasi kelangkaan ikan bilih, kelompok KKN UNP bersama pemuda Jorong Baing melakukan kegiatan pemijahan ikan bilih secara berkelanjutan di perairan sekitar Guguak Malalo.",
     content: `
@@ -130,8 +133,7 @@ const newsArticles = [
 
       <p class="mb-4">Pemerintah nagari menyambut baik kegiatan ini dan berharap ke depan akan semakin banyak kolaborasi serupa yang mendorong pelestarian lingkungan dan pemberdayaan masyarakat lokal. Kegiatan pemijahan ikan bilih ini menjadi langkah awal untuk membangun kesadaran ekologis dan menjaga identitas lingkungan Nagari Guguak Malalo.</p>
     `,
-    image:
-      "/pemijahanikan.jpg",
+    image: "/pemijahanikan.jpg",
     date: "2 Juli 2025",
     author: "Admin Nagari",
     authorImage: "/tanahdatar.png",
@@ -150,6 +152,9 @@ const BeritaDetail = () => {
   const [relatedArticles, setRelatedArticles] = useState<any[]>([]);
 
   useEffect(() => {
+    // Scroll to top when component mounts or ID changes
+    window.scrollTo(0, 0);
+
     // Find the article with the matching id
     const foundArticle = newsArticles.find((item) => item.id === id);
 
