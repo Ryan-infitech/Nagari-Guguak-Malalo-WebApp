@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, MapPin, Users, Calendar } from "lucide-react";
 
@@ -65,19 +66,23 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-[#7ca186] to-[#6a8b72] hover:from-[#6a8b72] hover:to-[#5a775f] text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-          >
-            Jelajahi Layanan Digital
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold backdrop-blur-sm bg-white/10 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-          >
-            Temukan Wisata Alam
-          </Button>
+          <Link to="/layanan">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-[#7ca186] to-[#6a8b72] hover:from-[#6a8b72] hover:to-[#5a775f] text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              Jelajahi Layanan Digital
+            </Button>
+          </Link>
+          <Link to="/pariwisata">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg font-semibold backdrop-blur-sm bg-white/10 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              Temukan Wisata Alam
+            </Button>
+          </Link>
         </div>
 
         {/* Scroll Indicator */}

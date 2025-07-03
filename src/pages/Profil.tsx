@@ -250,7 +250,7 @@ const Profil = () => {
                   {/* Top Level - Wali Nagari */}
                   <div className="flex justify-center mb-16 sm:mb-20">
                     <div className="relative">
-                      <div className="bg-gradient-to-r from-[#7ca186] to-blue-600 text-white p-4 rounded-lg shadow-lg text-center w-56 sm:w-64">
+                      <div className="bg-[#7ca186] to-blue-600 text-white p-4 rounded-lg shadow-lg text-center w-56 sm:w-64">
                         <div className="flex flex-col items-center">
                           <img
                             src="/fotopakwali.png"
@@ -269,10 +269,10 @@ const Profil = () => {
                   {/* Second Level - Sekretaris Nagari */}
                   <div className="flex justify-center mb-16 sm:mb-20">
                     <div className="relative">
-                      <div className="bg-blue-500 text-white p-3 sm:p-4 rounded-lg shadow-md text-center w-48 sm:w-56">
+                      <div className="bg-[#7ca186] text-white p-3 sm:p-4 rounded-lg shadow-md text-center w-48 sm:w-56">
                         <div className="flex flex-col items-center">
                           <img
-                            src="https://randomuser.me/api/portraits/men/42.jpg"
+                            src="/images/struktur/6.png"
                             alt="Rizal Ambri - Sekretaris Nagari"
                             className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white shadow-md mb-2 object-cover"
                           />
@@ -305,34 +305,34 @@ const Profil = () => {
                     <div className="grid grid-cols-6 gap-2">
                       {[
                         {
-                          name: "JUMAIDA A",
+                          name: "JUNAIDA.A",
                           title: "KEPALA SEKSI PEMERINTAHAN",
-                          photo: "https://randomuser.me/api/portraits/women/22.jpg",
+                          photo: "/images/struktur/9.png",
                         },
                         {
-                          name: "ASISWAN",
+                          name: "AJISMAN",
                           title: "KEPALA SEKSI KESEJAHTERAAN",
-                          photo: "https://randomuser.me/api/portraits/men/26.jpg",
+                          photo: "/images/struktur/7.png",
                         },
                         {
-                          name: "YULIA HELDA S.Pd",
+                          name: "YULIA HELDA,S.Pd",
                           title: "KEPALA SEKSI PELAYANAN",
-                          photo: "https://randomuser.me/api/portraits/women/33.jpg",
+                          photo: "/images/struktur/12.png",
                         },
                         {
-                          name: "FIDRIANS S.Pd",
+                          name: "FIDRIANIS,S.Pd",
                           title: "KEPALA URUSAN TU DAN UMUM",
-                          photo: "https://randomuser.me/api/portraits/men/65.jpg",
+                          photo: "/images/struktur/12.png",
                         },
                         {
                           name: "HADIYATI M.S.E",
                           title: "KEPALA URUSAN KEUANGAN",
-                          photo: "https://randomuser.me/api/portraits/women/78.jpg",
+                          photo: "/images/struktur/3.png",
                         },
                         {
                           name: "M.IHSAN S.E",
                           title: "KEPALA URUSAN PERENCANAAN",
-                          photo: "https://randomuser.me/api/portraits/men/45.jpg",
+                          photo: "/images/struktur/5.png",
                         },
                       ].map((staff, index) => (
                         <div key={index} className="flex flex-col items-center">
@@ -367,22 +367,22 @@ const Profil = () => {
                         {
                           name: "EDO ADIYAT PUTRA S.E",
                           title: "STAFF",
-                          photo: "https://randomuser.me/api/portraits/men/35.jpg",
+                          photo: "/images/struktur/10.png",
                         },
                         {
                           name: "GUSRIZAL Amd",
                           title: "STAFF",
-                          photo: "https://randomuser.me/api/portraits/men/48.jpg",
+                          photo: "/images/struktur/8.png",
                         },
                         {
                           name: "INDAH PERMATA SARI S.E",
                           title: "STAFF",
-                          photo: "https://randomuser.me/api/portraits/women/52.jpg",
+                          photo: "/images/struktur/2.png",
                         },
                         {
                           name: "M.ARIF",
                           title: "STAFF",
-                          photo: "https://randomuser.me/api/portraits/men/67.jpg",
+                          photo: "https://dummyimage.com/300x200/fff/fff",
                         },
                         {
                           name: "",
@@ -440,22 +440,22 @@ const Profil = () => {
                         {
                           name: "JONUS",
                           jorong: "KEPALA JORONG DUO KOTO",
-                          photo: "https://randomuser.me/api/portraits/men/55.jpg",
+                          photo: "/images/struktur/1.png",
                         },
                         {
                           name: "YUNARMAN",
                           jorong: "KEPALA JORONG GUGUAK",
-                          photo: "https://randomuser.me/api/portraits/men/62.jpg",
+                          photo: "/images/struktur/.png",
                         },
                         {
                           name: "SYAFRUDIN",
-                          jorong: "KEPALA JORONG BALANG",
-                          photo: "https://randomuser.me/api/portraits/men/45.jpg",
+                          jorong: "KEPALA JORONG BAING",
+                          photo: "/images/struktur/.png",
                         },
                       ].map((kepala, index) => (
                         <div
                           key={index}
-                          className="bg-green-100 border-2 border-green-300 rounded-lg p-3 sm:p-4 shadow-sm"
+                          className="bg-[#7ca186] border-2 border-green-300 rounded-lg p-3 sm:p-4 shadow-sm"
                         >
                           <div className="flex flex-col items-center text-center">
                             <img
@@ -464,10 +464,10 @@ const Profil = () => {
                               className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-3 border-green-400 shadow-md mb-3 object-cover"
                             />
                             <div>
-                              <p className="font-bold text-sm sm:text-base text-green-800 mb-1">
+                              <p className="font-bold text-sm sm:text-base text-white mb-1">
                                 {kepala.name}
                               </p>
-                              <p className="text-xs sm:text-sm text-green-600 font-medium">
+                              <p className="text-xs sm:text-sm text-white font-medium">
                                 {kepala.jorong}
                               </p>
                             </div>

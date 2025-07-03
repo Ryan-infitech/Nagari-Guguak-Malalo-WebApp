@@ -134,7 +134,7 @@ const Pariwisata = () => {
         className="relative py-20 bg-cover bg-center text-white"
         style={{
           backgroundImage:
-            "url('https://tribratanews.polri.go.id/web/image/blog.post/62825/image')",
+            "url('/images/gallery/danaujihan.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#7ca186]/80 to-blue-600/80"></div>

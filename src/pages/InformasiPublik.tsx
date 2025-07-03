@@ -34,11 +34,11 @@ const InformasiPublik = () => {
     },
     {
       id: "2",
-      judul: "Festival Budaya GuguakMalalo 2024",
+      judul: "Festival Budaya Guguak Malalo 2024",
       tanggal: "20 Januari 2024",
       kategori: "Budaya",
       ringkasan:
-        "Persiapan Festival Budaya GuguakMalalo 2024 telah memasuki tahap final dengan berbagai pertunjukan menarik",
+        "Persiapan Festival Budaya Guguak Malalo 2024 telah memasuki tahap final dengan berbagai pertunjukan menarik",
       views: 432,
       image:
         "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=200&fit=crop",
@@ -49,7 +49,7 @@ const InformasiPublik = () => {
       tanggal: "18 Januari 2024",
       kategori: "Ekonomi",
       ringkasan:
-        "Nagari GuguakMalalo meluncurkan program bantuan UMKM gelombang ketiga dengan total bantuan Rp 500 juta",
+        "Nagari Guguak Malalo meluncurkan program bantuan UMKM gelombang ketiga dengan total bantuan Rp 500 juta",
       views: 189,
       image:
         "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=200&fit=crop",
@@ -104,7 +104,7 @@ const InformasiPublik = () => {
   const laporanKinerja = [
     {
       periode: "2023",
-      judul: "Laporan Tahunan Kinerja Nagari GuguakMalalo",
+      judul: "Laporan Tahunan Kinerja Nagari Guguak Malalo",
       kategori: "Laporan Tahunan",
       size: "5.2 MB",
       download: 143,
@@ -147,14 +147,17 @@ const InformasiPublik = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section
+        className="relative py-20 bg-cover bg-center text-white"
+        style={{ backgroundImage: "url('/images/gallery/rumahgadang.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[#7ca186]/80 to-blue-600/80"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Informasi Publik
           </h1>
           <p className="text-xl max-w-2xl mx-auto">
-            Akses transparansi informasi dan berita terkini Nagari GuguakMalalo
+            Akses transparansi informasi dan berita terkini Nagari Guguak Malalo
           </p>
         </div>
       </section>

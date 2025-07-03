@@ -25,7 +25,7 @@ const Footer = () => {
               <div>
                 <h3 className="text-xl font-bold">Nagari Guguak Malalo</h3>
                 <p className="text-sm text-green-200">
-                  Digital Village Gateway
+                  Portal Digital Nagari
                 </p>
               </div>
             </div>
