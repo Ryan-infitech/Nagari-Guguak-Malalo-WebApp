@@ -17,52 +17,28 @@ import {
 const Pariwisata = () => {
   const destinasiWisata = [
     {
-      nama: "Danau Maninjau",
+      nama: "Danau Singkarak",
       kategori: "Danau",
       deskripsi:
         "Danau vulkanik yang memukau dengan pemandangan pegunungan di sekitarnya",
       aktivitas: ["Berenang", "Memancing", "Fotografi"],
-      jarak: "5 km dari pusat nagari",
+      jarak: "100 m dari pusat nagari",
       tiket: "Gratis",
       image:
-        "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=500&h=300&fit=crop",
+        "/danausingkarak.JPG",
       rating: 4.8,
     },
     {
-      nama: "Bukit Panorama",
+      nama: "Puncak Macau Duo",
       kategori: "Perbukitan",
       deskripsi:
         "Titik tertinggi dengan panorama 360 derajat Nagari GuguakMalalo",
       aktivitas: ["Hiking", "Sunrise hunting", "Camping"],
-      jarak: "8 km dari pusat nagari",
-      tiket: "Rp 10.000",
+      jarak: "4 km dari pusat nagari",
+      tiket: "Gratis",
       image:
-        "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&h=300&fit=crop",
+        "/images/gallery/macauduo.png",
       rating: 4.9,
-    },
-    {
-      nama: "Air Terjun Batang Harau",
-      kategori: "Air Terjun",
-      deskripsi:
-        "Air terjun bertingkat dengan kolam alami yang jernih dan segar",
-      aktivitas: ["Berenang", "Piknik", "Terapi alam"],
-      jarak: "3 km dari pusat nagari",
-      tiket: "Rp 5.000",
-      image:
-        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=500&h=300&fit=crop",
-      rating: 4.7,
-    },
-    {
-      nama: "Hutan Pinus Malalo",
-      kategori: "Hutan",
-      deskripsi:
-        "Kawasan hutan pinus yang asri dengan udara sejuk dan pemandangan indah",
-      aktivitas: ["Trekking", "Bird watching", "Meditasi"],
-      jarak: "6 km dari pusat nagari",
-      tiket: "Rp 8.000",
-      image:
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=500&h=300&fit=crop",
-      rating: 4.6,
     },
   ];
 

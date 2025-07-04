@@ -17,34 +17,13 @@ import {
 const UMKM = () => {
   const umkmFeatured = [
     {
-      nama: "Kerajinan Tenun Tradisional Malalo",
-      kategori: "Kerajinan",
-      lokasi: "Jorong Tengah",
+      nama: "Pondok Kalwa",
+      kategori: "F&B",
+      lokasi: "Jorong Guguak",
       rating: 4.8,
-      produk: "Kain tenun, tas, souvenir",
-      kontak: "0812-3456-7890",
-      image:
-        "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=300&fit=crop",
-    },
-    {
-      nama: "Warung Minang Bundo Kanduang",
-      kategori: "Kuliner",
-      lokasi: "Jorong Utara",
-      rating: 4.7,
-      produk: "Rendang, gulai, nasi padang",
-      kontak: "0813-4567-8901",
-      image:
-        "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=300&fit=crop",
-    },
-    {
-      nama: "Tani Organik GuguakMalalo",
-      kategori: "Pertanian",
-      lokasi: "Jorong Selatan",
-      rating: 4.9,
-      produk: "Sayuran organik, beras merah",
-      kontak: "0814-5678-9012",
-      image:
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&h=300&fit=crop",
+      produk: "Makanan, Minuman",
+      kontak: "082386006457",
+      image: "images/lain/pondokkalwa.png",
     },
   ];
 
