@@ -8,9 +8,9 @@ const NewsSection = () => {
   const news = [
     {
       id: "1",
-      title: "Pawai obor dan tolak bala bersama warga nagari guguakmalalo",
+      title: "Pawai obor dan tolak bala bersama warga nagari Guguak malalo",
       excerpt:
-        "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo.",
+        "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguak malalo.",
       image: "/IMG_1097.JPG",
       date: "1 Juli 2025",
       author: "Admin Nagari",

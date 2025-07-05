@@ -21,7 +21,7 @@ const WelcomeMessage = () => {
                   <div className="w-full max-w-md mx-auto">
                     <img
                       src="/fotopakwali.png"
-                      alt="Wali Nagari GuguakMalalo - Mulyadi"
+                      alt="Wali Nagari Guguak malalo - Mulyadi"
                       className="w-full h-auto rounded-lg shadow-lg object-cover"
                     />
                     <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br from-[#7ca186] to-blue-500 rounded-full opacity-20"></div>
@@ -39,13 +39,13 @@ const WelcomeMessage = () => {
 
                 <p className="text-base md:text-lg">
                   Dengan penuh rasa syukur kepada Allah SWT, kami
-                  mempersembahkan portal digital Nagari GuguakMalalo yang telah
+                  mempersembahkan portal digital Nagari Guguak malalo yang telah
                   dirancang khusus untuk memberikan kemudahan dalam mengakses
                   berbagai layanan administrasi dan informasi nagari.
                 </p>
 
                 <p className="text-base md:text-lg">
-                  Nagari GuguakMalalo dikenal dengan keindahan alamnya yang
+                  Nagari Guguak malalo dikenal dengan keindahan alamnya yang
                   menawan, mulai dari perbukitan hijau yang asri hingga danau
                   yang memukau. Melalui platform digital ini, kami berkomitmen
                   untuk tidak hanya memberikan layanan terbaik kepada
@@ -54,7 +54,7 @@ const WelcomeMessage = () => {
                 </p>
 
                 <p className="text-base md:text-lg">
-                  Mari bersama-sama membangun Nagari GuguakMalalo yang lebih
+                  Mari bersama-sama membangun Nagari Guguak malalo yang lebih
                   maju, sejahtera, dan berkelanjutan dengan memanfaatkan
                   teknologi digital untuk kemudahan hidup kita semua.
                 </p>
@@ -65,7 +65,7 @@ const WelcomeMessage = () => {
                       Mulyadi
                     </p>
                     <p className="text-[#7ca186] font-medium">
-                      Wali Nagari GuguakMalalo
+                      Wali Nagari Guguak malalo
                     </p>
                   </div>
                 </div>
