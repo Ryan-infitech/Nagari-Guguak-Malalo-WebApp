@@ -13,6 +13,7 @@ import {
   TreePine,
   Home,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Pariwisata = () => {
   const destinasiWisata = [
@@ -24,8 +25,7 @@ const Pariwisata = () => {
       aktivitas: ["Berenang", "Memancing", "Fotografi"],
       jarak: "100 m dari pusat nagari",
       tiket: "Gratis",
-      image:
-        "/danausingkarak.JPG",
+      image: "/danausingkarak.JPG",
       rating: 4.8,
     },
     {
@@ -36,8 +36,7 @@ const Pariwisata = () => {
       aktivitas: ["Hiking", "Sunrise hunting", "Camping"],
       jarak: "4 km dari pusat nagari",
       tiket: "Gratis",
-      image:
-        "/images/gallery/macauduo.png",
+      image: "/images/gallery/macauduo.png",
       rating: 4.9,
     },
   ];
@@ -109,8 +108,7 @@ const Pariwisata = () => {
       <section
         className="relative py-20 bg-cover bg-center text-white"
         style={{
-          backgroundImage:
-            "url('/images/gallery/danaujihan.jpg')",
+          backgroundImage: "url('/images/gallery/danaujihan.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#7ca186]/80 to-blue-600/80"></div>
@@ -186,16 +184,20 @@ const Pariwisata = () => {
                         {destinasi.tiket}
                       </span>
                       <div className="flex gap-2">
-                        <Button size="sm" variant="outline">
-                          <Camera className="h-4 w-4 mr-1" />
-                          Galeri
-                        </Button>
-                        <Button
-                          size="sm"
-                          className="bg-green-600 hover:bg-green-700"
-                        >
-                          Detail
-                        </Button>
+                        <Link to={`/pariwisata/${idx + 1}?tab=gallery`}>
+                          <Button size="sm" variant="outline">
+                            <Camera className="h-4 w-4 mr-1" />
+                            Galeri
+                          </Button>
+                        </Link>
+                        <Link to={`/pariwisata/${idx + 1}`}>
+                          <Button
+                            size="sm"
+                            className="bg-green-600 hover:bg-green-700"
+                          >
+                            Detail
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -312,7 +314,7 @@ const Pariwisata = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-[#7ca186] hover:bg-gray-100"
+              className="bg-white text-[#7ca186] hover:bg-gray-100 shadow-lg hover:shadow-xl border-2 border-white font-semibold"
             >
               <Home className="h-5 w-5 mr-2" />
               Booking Homestay
@@ -320,7 +322,7 @@ const Pariwisata = () => {
             <Button
               size="lg"
               variant="outline"
-              className="text-white border-white hover:bg-white hover:text-[#7ca186]"
+              className="text-white border-2 border-white bg-white/15 backdrop-blur-sm hover:bg-white hover:text-[#7ca186] shadow-lg hover:shadow-xl font-semibold"
             >
               <Users className="h-5 w-5 mr-2" />
               Hubungi Guide
