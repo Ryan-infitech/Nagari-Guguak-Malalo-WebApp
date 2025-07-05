@@ -27,7 +27,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/profil" element={<Profil />} />
-          <Route path="/layanan/*" element={<LayananDigital />} />
+          <Route path="/layanan" element={<LayananDigital />} />
+          <Route path="/layanan/:category" element={<LayananDigital />} />
           <Route path="/umkm" element={<UMKM />} />
           <Route path="/umkm/:id" element={<UMKMDetail />} />
           <Route path="/pariwisata" element={<Pariwisata />} />
