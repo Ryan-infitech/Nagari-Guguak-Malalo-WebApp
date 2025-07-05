@@ -12,29 +12,38 @@ const Navbar = () => {
 
   const layananItems = [
     {
-      title: "Layanan Kependudukan",
+      title: "Layanan Administrasi",
       items: [
-        { name: "Surat Keterangan Domisili", href: "/layanan/domisili" },
-        { name: "Surat Keterangan Tidak Mampu", href: "/layanan/sktm" },
-        { name: "Surat Keterangan Usaha", href: "/layanan/usaha" },
-        { name: "Surat Keterangan Kelahiran", href: "/layanan/kelahiran" },
-        { name: "Legalisir Dokumen", href: "/layanan/legalisir" },
+        { name: "Surat Keterangan Domisili", href: "/layanan/kependudukan" },
+        { name: "Surat Keterangan Tidak Mampu", href: "/layanan/kependudukan" },
+        { name: "Surat Keterangan Usaha", href: "/layanan/kependudukan" },
+        { name: "Surat Pengantar KTP/KK", href: "/layanan/kependudukan" },
+        { name: "Legalisir Dokumen", href: "/layanan/kependudukan" },
       ],
     },
     {
       title: "Layanan Pembangunan",
       items: [
-        { name: "Bantuan Pembangunan", href: "/layanan/bantuan-pembangunan" },
-        { name: "Laporan Kerusakan", href: "/layanan/laporan-kerusakan" },
-        { name: "Monitoring Proyek", href: "/layanan/monitoring" },
+        { name: "Bantuan Pembangunan", href: "/layanan/pembangunan" },
+        { name: "Laporan Kerusakan Infrastruktur", href: "/layanan/pembangunan" },
+        { name: "Monitoring Proyek", href: "/layanan/pembangunan" },
       ],
     },
     {
       title: "Layanan Ekonomi & Sosial",
       items: [
-        { name: "Pendaftaran UMKM", href: "/layanan/umkm" },
-        { name: "Bantuan Sosial", href: "/layanan/bantuan-sosial" },
-        { name: "Program Pemberdayaan", href: "/layanan/pemberdayaan" },
+        { name: "Pendaftaran UMKM", href: "/layanan/ekonomi" },
+        { name: "Bantuan Modal Usaha", href: "/layanan/ekonomi" },
+        { name: "Bantuan Sosial", href: "/layanan/sosial" },
+        { name: "Program Pemberdayaan", href: "/layanan/sosial" },
+      ],
+    },
+    {
+      title: "Layanan Lainnya",
+      items: [
+        { name: "Layanan Pendidikan", href: "/layanan/pendidikan" },
+        { name: "Layanan Kesehatan", href: "/layanan/kesehatan" },
+        { name: "Layanan Bantuan Hukum", href: "/layanan/posbakum" },
       ],
     },
   ];
@@ -116,29 +125,45 @@ const Navbar = () => {
               onMouseEnter={() => setActiveDropdown("layanan")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center space-x-1 font-medium text-gray-700 hover:text-[#7ca186] transition-colors">
+              <Link
+                to="/layanan"
+                className={`flex items-center space-x-1 font-medium transition-colors hover:text-[#7ca186] ${
+                  location.pathname.startsWith("/layanan") ? "text-[#7ca186]" : "text-gray-700"
+                }`}
+              >
                 <span>Layanan Digital</span>
                 <ChevronDown className="h-4 w-4" />
-              </button>
+              </Link>
 
               {activeDropdown === "layanan" && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-100 py-4 z-50">
-                  {layananItems.map((category, idx) => (
-                    <div key={idx} className="px-4 py-2">
-                      <h3 className="font-semibold text-[#7ca186] mb-2">
-                        {category.title}
-                      </h3>
-                      {category.items.map((item, itemIdx) => (
-                        <Link
-                          key={itemIdx}
-                          to={item.href}
-                          className="block px-2 py-1 text-sm text-gray-600 hover:text-[#7ca186] hover:bg-[#7ca186]/5 rounded transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-100 py-4 z-50">
+                  <div className="px-4 py-2 border-b border-gray-100 mb-2">
+                    <Link
+                      to="/layanan"
+                      className="block font-semibold text-[#7ca186] hover:text-[#6a8b72] transition-colors"
+                    >
+                      📋 Lihat Semua Layanan
+                    </Link>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    {layananItems.map((category, idx) => (
+                      <div key={idx} className="space-y-2">
+                        <h3 className="font-semibold text-[#7ca186] text-sm border-b border-gray-100 pb-1">
+                          {category.title}
+                        </h3>
+                        {category.items.map((item, itemIdx) => (
+                          <Link
+                            key={itemIdx}
+                            to={item.href}
+                            className="block px-2 py-1 text-xs text-gray-600 hover:text-[#7ca186] hover:bg-[#7ca186]/5 rounded transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
