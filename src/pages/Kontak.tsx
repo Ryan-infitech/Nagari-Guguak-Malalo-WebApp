@@ -62,28 +62,10 @@ const Kontak = () => {
 
   const petugasKontak = [
     {
-      nama: "Drs. H. Ahmad Syafii, M.Si",
-      jabatan: "Wali Nagari",
-      telepon: "0812-1111-1111",
-      email: "walinagari@gugukmalalo.id",
-    },
-    {
-      nama: "Ir. Siti Maryam, S.Sos",
-      jabatan: "Sekretaris Nagari",
-      telepon: "0812-2222-2222",
-      email: "sekretaris@gugukmalalo.id",
-    },
-    {
-      nama: "Budi Santoso, S.E",
-      jabatan: "Kepala Urusan Keuangan",
-      telepon: "0812-3333-3333",
-      email: "keuangan@gugukmalalo.id",
-    },
-    {
-      nama: "Rina Sari, S.Kom",
-      jabatan: "Admin IT & Website",
-      telepon: "0812-4444-4444",
-      email: "admin@gugukmalalo.id",
+      nama: "Edo Adiyat Putra S.E",
+      jabatan: "Staff",
+      telepon: "0852-7116-4143",
+      email: "Edo.adiyat@gugukmalalo.id",
     },
   ];
 
