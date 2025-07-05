@@ -382,33 +382,6 @@ const Kontak = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Butuh Bantuan Langsung?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Tim kami siap membantu Anda dengan pelayanan terbaik
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-green-600 hover:bg-gray-100"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Hubungi Sekarang
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-white border-white hover:bg-white hover:text-green-600"
-            >
-              <MessageSquare className="h-5 w-5 mr-2" />
-              Chat WhatsApp
-            </Button>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
