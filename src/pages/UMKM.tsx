@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,11 +13,13 @@ import {
   Phone,
   Star,
   ShoppingBag,
+  FileText,
 } from "lucide-react";
 
 const UMKM = () => {
   const umkmFeatured = [
     {
+      id: "1",
       nama: "Pondok Kalwa",
       kategori: "F&B",
       lokasi: "Jorong Guguak",
@@ -158,9 +161,11 @@ const UMKM = () => {
                         <ShoppingBag className="h-4 w-4 mr-2" />
                         Kunjungi
                       </Button>
-                      <Button variant="outline" className="flex-1">
-                        Detail
-                      </Button>
+                      <Link to={`/umkm/${umkm.id}`} className="flex-1">
+                        <Button variant="outline" className="w-full">
+                          Detail
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </CardContent>
@@ -215,27 +220,30 @@ const UMKM = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Card "Ingin Mengembangkan Usaha Anda?" - Updated Styling */}
       <section className="py-16 bg-gradient-to-r from-[#7ca186] to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ingin Mengembangkan Usaha Anda?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Bergabunglah dengan program pemberdayaan UMKM Nagari GuguakMalalo
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Dapatkan dukungan penuh untuk mengembangkan usaha Anda melalui
+            program UMKM Nagari
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-[#7ca186] hover:bg-gray-100"
+              className="bg-white text-[#7ca186] hover:bg-gray-100 shadow-lg hover:shadow-xl border-2 border-white font-semibold"
             >
+              <FileText className="h-5 w-5 mr-2" />
               Daftar UMKM
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="text-white border-white hover:bg-white hover:text-[#7ca186]"
+              className="text-white border-2 border-white bg-white/15 backdrop-blur-sm hover:bg-white hover:text-[#7ca186] shadow-lg hover:shadow-xl font-semibold"
             >
+              <Users className="h-5 w-5 mr-2" />
               Konsultasi Gratis
             </Button>
           </div>
