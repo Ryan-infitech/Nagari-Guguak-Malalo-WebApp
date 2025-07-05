@@ -76,7 +76,7 @@ const PortalWarga = () => {
       title: "Gotong Royong Pembersihan Danau",
       date: "2024-01-21",
       time: "07:00 WIB",
-      location: "Danau GuguakMalalo",
+      location: "Danau Guguak malalo",
       participants: 45
     },
     {
@@ -111,7 +111,7 @@ const PortalWarga = () => {
         <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg p-8 mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold mb-2">Portal Warga GuguakMalalo</h1>
+              <h1 className="text-3xl font-bold mb-2">Portal Warga Guguak malalo</h1>
               <p className="text-lg opacity-90">Selamat datang di layanan digital nagari Anda</p>
             </div>
             <div className="hidden md:block">

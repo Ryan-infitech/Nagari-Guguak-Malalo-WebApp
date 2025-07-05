@@ -27,7 +27,7 @@ const newsArticles = [
     title:
       "Syiar Muharram: Semangat Kebersamaan Masyarakat Guguak Malalo Dalam Pawai Obor",
     content: `
-      <p class="mb-4">GUGUAKMALALO - Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo. Kegiatan tradisional ini menjadi momen penting bagi warga dalam memohon perlindungan dan keselamatan bagi kampung halaman mereka.</p>
+      <p class="mb-4">Guguak malalo - Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguak malalo. Kegiatan tradisional ini menjadi momen penting bagi warga dalam memohon perlindungan dan keselamatan bagi kampung halaman mereka.</p>
       
       <p class="mb-4">Acara yang berlangsung pada malam hari ini dihadiri oleh berbagai kalangan masyarakat, mulai dari tokoh adat, pemuka agama, hingga warga dari berbagai lapisan usia. Terlihat jelas antusiasme warga yang mengenakan pakaian tradisional khas Minangkabau, menciptakan atmosfer yang sarat akan nilai-nilai budaya lokal.</p>
       
@@ -37,12 +37,12 @@ const newsArticles = [
       
       <p class="mb-4">Kegiatan ini juga menjadi ajang mempererat tali silaturahmi antar warga nagari. Anak-anak, remaja, dewasa, hingga para tetua berkumpul dalam satu barisan yang kompak, menunjukkan solidaritas dan rasa persaudaraan yang tinggi.</p>
       
-      <p class="mb-4">Pawai obor dan tolak bala di Nagari Guguakmalalo ini diharapkan dapat terus dilestarikan sebagai warisan budaya yang berharga. Selain sebagai bentuk pelestarian tradisi, kegiatan ini juga menjadi sarana edukasi bagi generasi muda tentang pentingnya menjaga nilai-nilai luhur budaya Minangkabau.</p>
+      <p class="mb-4">Pawai obor dan tolak bala di Nagari Guguak malalo ini diharapkan dapat terus dilestarikan sebagai warisan budaya yang berharga. Selain sebagai bentuk pelestarian tradisi, kegiatan ini juga menjadi sarana edukasi bagi generasi muda tentang pentingnya menjaga nilai-nilai luhur budaya Minangkabau.</p>
       
-      <p class="mb-4">"Acara yang berlangsung dengan tertib dan lancar ini ditutup dengan doa bersama, memohon agar Nagari Guguakmalalo senantiasa dalam lindungan dan keberkahan Tuhan Yang Maha Esa.</p>
+      <p class="mb-4">"Acara yang berlangsung dengan tertib dan lancar ini ditutup dengan doa bersama, memohon agar Nagari Guguak malalo senantiasa dalam lindungan dan keberkahan Tuhan Yang Maha Esa.</p>
     `,
     excerpt:
-      "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo.",
+      "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguak malalo.",
     image: "/IMG_1097.JPG",
     galleryImages: ["/1.JPG", "/2.JPG", "/3.jpg"],
     date: "2 juli 2025",
@@ -503,7 +503,7 @@ const BeritaDetail = () => {
             </h2>
             <p className="text-gray-600 mb-6">
               Berlangganan newsletter kami untuk mendapatkan berita dan
-              informasi terbaru dari Nagari GuguakMalalo
+              informasi terbaru dari Nagari Guguak malalo
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input

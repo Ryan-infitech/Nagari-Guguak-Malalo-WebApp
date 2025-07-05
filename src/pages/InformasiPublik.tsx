@@ -28,7 +28,7 @@ const InformasiPublik = () => {
       tanggal: "2 Juli 2025",
       kategori: "Event",
       ringkasan:
-        "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguakmalalo.",
+        "Suasana khidmat dan penuh kebersamaan terpancar dalam acara pawai obor dan tolak bala yang digelar oleh masyarakat Nagari Guguak malalo.",
       views: 1245,
       image: "/IMG_1097.JPG",
     },

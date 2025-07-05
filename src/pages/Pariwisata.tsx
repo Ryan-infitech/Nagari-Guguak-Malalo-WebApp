@@ -32,7 +32,7 @@ const Pariwisata = () => {
       nama: "Puncak Macau Duo",
       kategori: "Perbukitan",
       deskripsi:
-        "Titik tertinggi dengan panorama 360 derajat Nagari GuguakMalalo",
+        "Titik tertinggi dengan panorama 360 derajat Nagari Guguak malalo",
       aktivitas: ["Hiking", "Sunrise hunting", "Camping"],
       jarak: "4 km dari pusat nagari",
       tiket: "Gratis",
@@ -74,7 +74,7 @@ const Pariwisata = () => {
         "Festival budaya dengan pertunjukan tradisional dan kuliner khas",
     },
     {
-      nama: "GuguakMalalo Trail Run",
+      nama: "Guguak malalo Trail Run",
       tanggal: "22 April 2024",
       lokasi: "Bukit Panorama",
       deskripsi: "Lomba lari lintas alam dengan rute menantang di perbukitan",
@@ -114,11 +114,11 @@ const Pariwisata = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#7ca186]/80 to-blue-600/80"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Pariwisata GuguakMalalo
+            Pariwisata Guguak malalo
           </h1>
           <p className="text-xl max-w-2xl mx-auto">
             Jelajahi keindahan alam perbukitan dan danau yang menawan di Nagari
-            GuguakMalalo
+            Guguak malalo
           </p>
         </div>
       </section>
@@ -270,7 +270,7 @@ const Pariwisata = () => {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Jangan lewatkan berbagai event menarik yang diselenggarakan di
-              Nagari GuguakMalalo
+              Nagari Guguak malalo
             </p>
           </div>
 
@@ -306,7 +306,7 @@ const Pariwisata = () => {
       <section className="py-16 bg-gradient-to-r from-[#7ca186] to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Siap Menjelajahi GuguakMalalo?
+            Siap Menjelajahi Guguak malalo?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Hubungi kami untuk informasi lebih lanjut dan pemesanan paket wisata

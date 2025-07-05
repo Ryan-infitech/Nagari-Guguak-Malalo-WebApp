@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Profil from "./pages/Profil";
 import LayananDigital from "./pages/LayananDigital";
+import LayananDetail from "./pages/LayananDetail";
 import UMKM from "./pages/UMKM";
 import UMKMDetail from "./pages/UMKMDetail";
 import Pariwisata from "./pages/Pariwisata";
@@ -29,6 +30,14 @@ const App = () => (
           <Route path="/profil" element={<Profil />} />
           <Route path="/layanan" element={<LayananDigital />} />
           <Route path="/layanan/:category" element={<LayananDigital />} />
+          <Route
+            path="/layanan/:category/:serviceId"
+            element={<LayananDetail />}
+          />
+          <Route
+            path="/layanan/:category/:serviceId/detail"
+            element={<LayananDetail />}
+          />
           <Route path="/umkm" element={<UMKM />} />
           <Route path="/umkm/:id" element={<UMKMDetail />} />
           <Route path="/pariwisata" element={<Pariwisata />} />

@@ -68,7 +68,7 @@ const UMKM = () => {
           </h1>
           <p className="text-xl max-w-2xl mx-auto">
             Memberdayakan usaha mikro kecil menengah untuk kemajuan ekonomi
-            Nagari GuguakMalalo
+            Nagari Guguak malalo
           </p>
         </div>
       </section>
@@ -117,7 +117,7 @@ const UMKM = () => {
               UMKM Unggulan
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Produk-produk terbaik dari UMKM Nagari GuguakMalalo yang telah
+              Produk-produk terbaik dari UMKM Nagari Guguak malalo yang telah
               dikenal luas
             </p>
           </div>
