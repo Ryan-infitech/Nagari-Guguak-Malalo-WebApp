@@ -65,25 +65,35 @@ const Pariwisata = () => {
     },
   ];
 
+  // Updated event data structure to match admin system
   const eventWisata = [
     {
-      nama: "Festival Danau Maninjau",
+      id: "1",
+      nama: "Festival Danau Singkarak",
       tanggal: "15-17 Maret 2024",
-      lokasi: "Danau Maninjau",
+      lokasi: "Danau Singkarak",
       deskripsi:
         "Festival budaya dengan pertunjukan tradisional dan kuliner khas",
+      kategori: "Budaya",
+      status: "upcoming",
     },
     {
-      nama: "Guguak malalo Trail Run",
+      id: "2",
+      nama: "Guguak Malalo Trail Run",
       tanggal: "22 April 2024",
       lokasi: "Bukit Panorama",
       deskripsi: "Lomba lari lintas alam dengan rute menantang di perbukitan",
+      kategori: "Olahraga",
+      status: "upcoming",
     },
     {
+      id: "3",
       nama: "Photography Contest",
       tanggal: "10-12 Mei 2024",
       lokasi: "Seluruh Nagari",
       deskripsi: "Kontes fotografi alam dan budaya dengan hadiah menarik",
+      kategori: "Seni",
+      status: "upcoming",
     },
   ];
 
@@ -270,7 +280,7 @@ const Pariwisata = () => {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Jangan lewatkan berbagai event menarik yang diselenggarakan di
-              Nagari Guguak malalo
+              Nagari Guguak Malalo
             </p>
           </div>
 
@@ -278,7 +288,16 @@ const Pariwisata = () => {
             {eventWisata.map((event, idx) => (
               <Card key={idx} className="border-l-4 border-l-blue-500">
                 <CardHeader>
-                  <CardTitle className="text-lg">{event.nama}</CardTitle>
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-lg">{event.nama}</CardTitle>
+                    <Badge
+                      variant={
+                        event.status === "upcoming" ? "default" : "secondary"
+                      }
+                    >
+                      {event.kategori}
+                    </Badge>
+                  </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <Calendar className="h-4 w-4 mr-2" />
                     {event.tanggal}
@@ -298,6 +317,16 @@ const Pariwisata = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Link to view all events */}
+          <div className="text-center mt-8">
+            <Button
+              variant="outline"
+              className="border-[#7ca186] text-[#7ca186] hover:bg-[#7ca186] hover:text-white"
+            >
+              Lihat Semua Event
+            </Button>
           </div>
         </div>
       </section>
