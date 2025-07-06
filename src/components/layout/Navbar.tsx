@@ -25,7 +25,10 @@ const Navbar = () => {
       title: "Layanan Pembangunan",
       items: [
         { name: "Bantuan Pembangunan", href: "/layanan/pembangunan" },
-        { name: "Laporan Kerusakan Infrastruktur", href: "/layanan/pembangunan" },
+        {
+          name: "Laporan Kerusakan Infrastruktur",
+          href: "/layanan/pembangunan",
+        },
         { name: "Monitoring Proyek", href: "/layanan/pembangunan" },
       ],
     },
@@ -128,7 +131,9 @@ const Navbar = () => {
               <Link
                 to="/layanan"
                 className={`flex items-center space-x-1 font-medium transition-colors hover:text-[#7ca186] ${
-                  location.pathname.startsWith("/layanan") ? "text-[#7ca186]" : "text-gray-700"
+                  location.pathname.startsWith("/layanan")
+                    ? "text-[#7ca186]"
+                    : "text-gray-700"
                 }`}
               >
                 <span>Layanan Digital</span>
@@ -145,7 +150,7 @@ const Navbar = () => {
                       📋 Lihat Semua Layanan
                     </Link>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-4 px-4">
                     {layananItems.map((category, idx) => (
                       <div key={idx} className="space-y-2">
@@ -204,9 +209,9 @@ const Navbar = () => {
               Kontak
             </Link>
 
-            <Link to="/portal-warga">
+            <Link to="/login">
               <Button className="bg-gradient-to-r from-[#7ca186] to-blue-600 hover:from-[#6a8b72] hover:to-blue-700 text-white">
-                Portal Warga
+                Login Portal
               </Button>
             </Link>
           </div>
@@ -263,9 +268,9 @@ const Navbar = () => {
               >
                 Kontak
               </Link>
-              <Link to="/portal-warga">
+              <Link to="/login">
                 <Button className="bg-gradient-to-r from-[#7ca186] to-blue-600 w-fit">
-                  Portal Warga
+                  Login Portal
                 </Button>
               </Link>
             </div>
