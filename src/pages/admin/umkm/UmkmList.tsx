@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { PlusCircle, Edit, Trash2, Eye } from "lucide-react";
+import { PlusCircle, Edit, Trash2, Eye, Book, Store } from "lucide-react";
 import { DataTable } from "@/components/admin/shared/DataTable";
 import ConfirmDialog from "@/components/admin/shared/ConfirmDialog";
 import AdminBreadcrumbs from "@/components/admin/shared/AdminBreadcrumbs";
@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
 
 // Example UMKM data
 interface UMKM {
@@ -243,6 +244,42 @@ const AdminUMKM = () => {
           <PlusCircle className="h-4 w-4 mr-2" />
           Tambah UMKM
         </Button>
+      </div>
+
+      {/* Quick Navigation Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <Card className="bg-orange-50 border-orange-200">
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="font-semibold text-orange-900">Daftar UMKM</h3>
+                <p className="text-sm text-orange-700">
+                  Kelola data UMKM dan produk
+                </p>
+              </div>
+              <Store className="h-8 w-8 text-orange-600" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card
+          className="bg-indigo-50 border-indigo-200 cursor-pointer hover:bg-indigo-100 transition-colors"
+          onClick={() => navigate("/admin/umkm/program")}
+        >
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="font-semibold text-indigo-900">
+                  Program Pemberdayaan
+                </h3>
+                <p className="text-sm text-indigo-700">
+                  Kelola program pelatihan dan pembinaan
+                </p>
+              </div>
+              <Book className="h-8 w-8 text-indigo-600" />
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       <DataTable
