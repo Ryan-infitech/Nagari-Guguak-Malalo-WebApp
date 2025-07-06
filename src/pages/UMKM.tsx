@@ -210,9 +210,16 @@ const UMKM = () => {
                     <p>📅 {program.tanggal}</p>
                     <p>👥 {program.peserta}</p>
                   </div>
-                  <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700">
-                    Daftar Sekarang
-                  </Button>
+                  <div className="flex gap-2 mt-4">
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                      Daftar Sekarang
+                    </Button>
+                    <Link to={`/umkm/program/${idx + 1}`} className="w-full">
+                      <Button variant="outline" className="w-full">
+                        Lihat Detail
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             ))}
