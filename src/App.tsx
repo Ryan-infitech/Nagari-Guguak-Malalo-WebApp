@@ -15,6 +15,7 @@ import InformasiPublik from "./pages/InformasiPublik";
 import BeritaDetail from "./pages/BeritaDetail";
 import Kontak from "./pages/Kontak";
 import PortalWarga from "./pages/PortalWarga";
+import LoginPortal from "./pages/LoginPortal";
 import NotFound from "./pages/NotFound";
 
 // Admin Pages
@@ -33,6 +34,10 @@ import AdminUsers from "./pages/admin/users/UsersList";
 import AdminUserForm from "./pages/admin/users/UserForm";
 import EventList from "./pages/admin/events/EventList";
 import EventForm from "./pages/admin/events/EventForm";
+// Import the new components for UMKM Programs
+import UmkmProgramList from "./pages/admin/umkm/UmkmProgramList";
+import UmkmProgramForm from "./pages/admin/umkm/UmkmProgramForm";
+import UMKMProgramDetail from "./pages/UmkmProgramDetail";
 import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient();
@@ -58,13 +63,15 @@ const App = () => (
               path="/layanan/:category/:serviceId/detail"
               element={<LayananDetail />}
             />
-            <Route path="/umkm" element={<UMKM />} />
+            <Route path="/umkm/program/:id" element={<UMKMProgramDetail />} />
             <Route path="/umkm/:id" element={<UMKMDetail />} />
+            <Route path="/umkm" element={<UMKM />} />
             <Route path="/pariwisata" element={<Pariwisata />} />
             <Route path="/pariwisata/:id" element={<PariwisataDetail />} />
             <Route path="/informasi" element={<InformasiPublik />} />
             <Route path="/informasi/berita/:id" element={<BeritaDetail />} />
             <Route path="/kontak" element={<Kontak />} />
+            <Route path="/login" element={<LoginPortal />} />
             <Route path="/portal-warga" element={<PortalWarga />} />
 
             {/* Admin Routes */}
@@ -80,6 +87,16 @@ const App = () => (
               <Route path="umkm" element={<AdminUMKM />} />
               <Route path="umkm/tambah" element={<AdminUMKMForm />} />
               <Route path="umkm/edit/:id" element={<AdminUMKMForm />} />
+
+              {/* UMKM Program routes */}
+              <Route path="umkm/program" element={<UmkmProgramList />} />
+              <Route path="umkm/program/tambah" element={<UmkmProgramForm />} />
+              <Route
+                path="umkm/program/edit/:id"
+                element={<UmkmProgramForm />}
+              />
+              <Route path="umkm/program/:id" element={<UMKMProgramDetail />} />
+
               <Route path="pariwisata" element={<AdminTourism />} />
               <Route path="pariwisata/tambah" element={<AdminTourismForm />} />
               <Route
