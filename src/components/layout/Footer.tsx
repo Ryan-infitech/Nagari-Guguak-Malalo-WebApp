@@ -9,6 +9,27 @@ import {
   Youtube,
 } from "lucide-react";
 
+// Custom scroll-to-top link component
+const ScrollToTopLink = ({
+  to,
+  children,
+  className,
+}: {
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
+  return (
+    <Link to={to} onClick={handleClick} className={className}>
+      {children}
+    </Link>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-blue-900 text-white">
@@ -24,9 +45,7 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold">Nagari Guguak Malalo</h3>
-                <p className="text-sm text-green-200">
-                  Portal Digital Nagari
-                </p>
+                <p className="text-sm text-green-200">Portal Digital Nagari</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm">
@@ -144,7 +163,10 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-green-300 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
                   <p>Kantor Wali Nagari Guguak Malalo</p>
-                  <p>Kecamatan Batipuh Selatan, Kabupaten Tanah Datar, Sumatera Barat 27265</p>
+                  <p>
+                    Kecamatan Batipuh Selatan, Kabupaten Tanah Datar, Sumatera
+                    Barat 27265
+                  </p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -164,27 +186,34 @@ const Footer = () => {
         <div className="border-t border-white/50 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Nagari Guguak Malalo. Seluruh hak cipta dilindungi.
+              © 2025 Nagari Guguak Malalo & KKN UNP GUGUAKMALALO 2025. Seluruh
+              hak cipta dilindungi.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link
+              <ScrollToTopLink
                 to="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Kebijakan Privasi
-              </Link>
-              <Link
+              </ScrollToTopLink>
+              <ScrollToTopLink
                 to="/terms"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Syarat & Ketentuan
-              </Link>
-              <Link
+              </ScrollToTopLink>
+              <ScrollToTopLink
                 to="/sitemap"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Peta Situs
-              </Link>
+              </ScrollToTopLink>
+              <ScrollToTopLink
+                to="/team-developer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Team Developer
+              </ScrollToTopLink>
             </div>
           </div>
         </div>
