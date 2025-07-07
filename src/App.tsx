@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/layout/ScrollToTop";
 import Index from "./pages/Index";
 import Profil from "./pages/Profil";
 import LayananDigital from "./pages/LayananDigital";
@@ -16,7 +17,11 @@ import BeritaDetail from "./pages/BeritaDetail";
 import Kontak from "./pages/Kontak";
 import PortalWarga from "./pages/PortalWarga";
 import LoginPortal from "./pages/LoginPortal";
+import TeamDeveloper from "./pages/TeamDeveloper";
 import NotFound from "./pages/NotFound";
+import TermsConditions from "./pages/TermsConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Sitemap from "./pages/Sitemap";
 
 // Admin Pages
 import AdminLogin from "./pages/admin/Login";
@@ -49,6 +54,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Index />} />
@@ -73,6 +79,10 @@ const App = () => (
             <Route path="/kontak" element={<Kontak />} />
             <Route path="/login" element={<LoginPortal />} />
             <Route path="/portal-warga" element={<PortalWarga />} />
+            <Route path="/team-developer" element={<TeamDeveloper />} />
+            <Route path="/terms" element={<TermsConditions />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/sitemap" element={<Sitemap />} />
 
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
