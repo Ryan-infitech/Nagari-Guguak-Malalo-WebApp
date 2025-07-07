@@ -286,7 +286,10 @@ const Pariwisata = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {eventWisata.map((event, idx) => (
-              <Card key={idx} className="border-l-4 border-l-blue-500">
+              <Card
+                key={idx}
+                className="border-l-4 border-l-blue-500 flex flex-col h-full"
+              >
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <CardTitle className="text-lg">{event.nama}</CardTitle>
@@ -307,13 +310,15 @@ const Pariwisata = () => {
                     {event.lokasi}
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-sm mb-4">
+                <CardContent className="flex flex-col flex-grow">
+                  <p className="text-gray-600 text-sm min-h-[60px]">
                     {event.deskripsi}
                   </p>
-                  <Button variant="outline" className="w-full">
-                    Info Lengkap
-                  </Button>
+                  <div className="mt-auto pt-4">
+                    <Button variant="outline" className="w-full">
+                      Info Lengkap
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
