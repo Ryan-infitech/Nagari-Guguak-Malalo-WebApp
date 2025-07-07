@@ -109,7 +109,7 @@ const QuickServices = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-500 border-0 shadow-lg hover:scale-105 relative overflow-hidden"
+              className="group hover:shadow-xl transition-all duration-500 border-0 shadow-lg hover:scale-105 relative overflow-hidden flex flex-col h-full"
             >
               {service.popular && (
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-400 to-red-400 text-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -117,7 +117,7 @@ const QuickServices = () => {
                 </div>
               )}
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col h-full">
                 <div
                   className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
@@ -128,19 +128,23 @@ const QuickServices = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                {/* Fixed height content area */}
+                <div className="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
                   {service.description}
-                </p>
+                </div>
 
-                <ScrollToTopLink to={service.href}>
-                  <Button
-                    variant="outline"
-                    className="w-full group-hover:bg-gradient-to-r group-hover:from-green-600 group-hover:to-blue-600 group-hover:text-white group-hover:border-transparent transition-all duration-300"
-                  >
-                    Akses Layanan
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </ScrollToTopLink>
+                {/* Button consistently at bottom */}
+                <div className="mt-auto">
+                  <ScrollToTopLink to={service.href}>
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-gradient-to-r group-hover:from-green-600 group-hover:to-blue-600 group-hover:text-white group-hover:border-transparent transition-all duration-300"
+                    >
+                      Akses Layanan
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </ScrollToTopLink>
+                </div>
               </div>
             </Card>
           ))}
