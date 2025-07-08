@@ -32,6 +32,28 @@ interface TeamMemberDetailProps {
   isReversed?: boolean;
 }
 
+// Custom VGen Icon Component
+const VGenIcon: React.FC<{ size: number }> = ({ size }) => (
+  <img
+    src="/VGen.png"
+    alt="VGen"
+    width={size}
+    height={size}
+    className="object-contain"
+  />
+);
+
+// Custom Webtoon Icon Component
+const WebtoonIcon: React.FC<{ size: number }> = ({ size }) => (
+  <img
+    src="/webtoon.jpg"
+    alt="Webtoon"
+    width={size}
+    height={size}
+    className="object-contain"
+  />
+);
+
 const TeamMemberDetail: React.FC<TeamMemberDetailProps> = ({
   name,
   role,
@@ -133,7 +155,13 @@ const TeamMemberDetail: React.FC<TeamMemberDetailProps> = ({
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-blue-500 transition-colors"
             >
-              <Globe size={20} />
+              {website.includes("vgen.co") ? (
+                <VGenIcon size={20} />
+              ) : website.includes("webtoon") ? (
+                <WebtoonIcon size={20} />
+              ) : (
+                <Globe size={20} />
+              )}
             </a>
           )}
           {whatsapp && (
@@ -262,7 +290,13 @@ const CoordinatorCard: React.FC<CoordinatorCardProps> = ({
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-blue-500 transition-colors bg-white p-2 rounded-full shadow-md hover:shadow-lg"
             >
-              <Globe size={18} />
+              {website.includes("vgen.co") ? (
+                <VGenIcon size={18} />
+              ) : website.includes("webtoon") ? (
+                <WebtoonIcon size={18} />
+              ) : (
+                <Globe size={18} />
+              )}
             </a>
           )}
           {whatsapp && (
@@ -299,7 +333,7 @@ const TeamDeveloper = () => {
     {
       name: "Jihan Zahrah Abrilia",
       role: "UI/UX Designer",
-      photo: "/images/team/Jihanzahrahabrilia.jpg",
+      photo: "/images/team/jihanzahra.jpg",
       quote:
         "Desain yang baik bukan hanya tentang keindahan, tetapi tentang bagaimana pengguna dapat dengan mudah mengakses informasi dan layanan yang mereka butuhkan.",
       instagram: "https://www.instagram.com/jizliaa/",
@@ -308,17 +342,19 @@ const TeamDeveloper = () => {
     {
       name: "Rhenata Mewa Pratiwi",
       role: "Asisten Design",
-      photo: "/images/team/RhenataMewaPratiwi.png",
+      photo: "/images/team/rhenatamewapratiwi.jpg",
       quote:
         "Setiap baris kode yang saya tulis adalah jembatan yang menghubungkan teknologi dengan kebutuhan nyata masyarakat desa.",
-      Instagram: "https://www.instagram.com/im.rhenata/",
+      instagram: "https://www.instagram.com/im.rhenata/",
+      website: "https://vgen.co/rhenarui",
+      email: "rhenartwork@gmail.com",
     },
   ];
 
   // Data for coordinators and project leaders
   const coordinators = [
     {
-      name: "Azhila Zakirah Candra",
+      name: "Ashilah Dzakirah Candra",
       role: "Koordinator",
       photo: "/images/team/ASHILAHDZAKIRAHCANDRA.png",
       quote:
@@ -327,6 +363,8 @@ const TeamDeveloper = () => {
       linkedin:
         "https://www.linkedin.com/in/ashilah-dzakirah-candra-23b6a9286/",
       icon: <Crown size={20} />,
+      email: "ashilahchandra@gmail.com",
+      website: "https://www.webtoons.com/en/ashilah",
     },
     {
       name: "Rieflan Rukia Adzfan",
