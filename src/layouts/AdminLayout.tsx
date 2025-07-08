@@ -13,6 +13,7 @@ import {
   X,
   User,
   ChevronDown,
+  ClipboardList,
 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -98,6 +99,16 @@ const AdminLayout = () => {
       icon: <FileText className="h-4 w-4" />,
       label: "Berita & Pengumuman",
       href: "/admin/berita",
+    },
+    {
+      icon: <FileText className="h-4 w-4" />,
+      label: "Layanan Digital",
+      href: "/admin/layanan",
+    },
+    {
+      icon: <ClipboardList className="h-4 w-4" />,
+      label: "Pengajuan Layanan",
+      href: "/admin/pengajuan",
     },
     {
       icon: <Users className="h-4 w-4" />,
