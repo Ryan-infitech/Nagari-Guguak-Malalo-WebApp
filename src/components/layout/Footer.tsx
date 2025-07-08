@@ -186,7 +186,7 @@ const Footer = () => {
         <div className="border-t border-white/50 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2025 Nagari Guguak Malalo & KKN UNP GUGUAKMALALO 2025. Seluruh
+              © 2025 Nagari Guguak Malalo X KKN UNP. Seluruh
               hak cipta dilindungi.
             </p>
             <div className="flex space-x-6 text-sm">
