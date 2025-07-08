@@ -39,6 +39,11 @@ import AdminUsers from "./pages/admin/users/UsersList";
 import AdminUserForm from "./pages/admin/users/UserForm";
 import EventList from "./pages/admin/events/EventList";
 import EventForm from "./pages/admin/events/EventForm";
+
+// Service Requests Pages
+import ServiceRequestsList from "./pages/admin/serviceRequests/ServiceRequestsList";
+import ServiceRequestDetail from "./pages/admin/serviceRequests/ServiceRequestDetail";
+
 // Import the new components for UMKM Programs
 import UmkmProgramList from "./pages/admin/umkm/UmkmProgramList";
 import UmkmProgramForm from "./pages/admin/umkm/UmkmProgramForm";
@@ -106,6 +111,14 @@ const App = () => (
                 element={<UmkmProgramForm />}
               />
               <Route path="umkm/program/:id" element={<UMKMProgramDetail />} />
+
+              {/* Service Requests routes */}
+              <Route path="pengajuan" element={<ServiceRequestsList />} />
+              <Route path="pengajuan/:id" element={<ServiceRequestDetail />} />
+              <Route
+                path="pengajuan/:id/history"
+                element={<ServiceRequestDetail />}
+              />
 
               <Route path="pariwisata" element={<AdminTourism />} />
               <Route path="pariwisata/tambah" element={<AdminTourismForm />} />
