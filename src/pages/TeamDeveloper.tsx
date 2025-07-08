@@ -454,40 +454,6 @@ const TeamDeveloper = () => {
           </div>
         </div>
       </section>
-
-      {/* Team Statistics */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Statistik Tim
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Beberapa statistik mengenai tim dan projek yang sedang kami
-              kembangkan
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#7ca186] mb-2">6</div>
-              <div className="text-gray-600">Anggota Tim</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#7ca186] mb-2">2</div>
-              <div className="text-gray-600">Bulan Pengembangan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#7ca186] mb-2">15+</div>
-              <div className="text-gray-600">Fitur Layanan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#7ca186] mb-2">1</div>
-              <div className="text-gray-600">Platform Terintegrasi</div>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
