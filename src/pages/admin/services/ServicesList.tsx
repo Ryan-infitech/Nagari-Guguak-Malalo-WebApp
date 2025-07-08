@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { PlusCircle, Edit, Trash2, Eye } from "lucide-react";
+import { PlusCircle, Edit, Trash2, Eye, FileText, Filter } from "lucide-react";
 import { DataTable } from "@/components/admin/shared/DataTable";
 import ConfirmDialog from "@/components/admin/shared/ConfirmDialog";
 import AdminBreadcrumbs from "@/components/admin/shared/AdminBreadcrumbs";
@@ -12,8 +12,17 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Example services data
 interface Service {
@@ -21,9 +30,10 @@ interface Service {
   name: string;
   category: string;
   estimatedTime: string;
-  status: "available" | "maintenance";
+  status: "available" | "maintenance" | "draft";
   requirements: string[];
   views: number;
+  lastUpdated: string;
 }
 
 export const mockServicesData: Service[] = [
@@ -39,6 +49,7 @@ export const mockServicesData: Service[] = [
       "Surat Pengantar RT/RW",
     ],
     views: 543,
+    lastUpdated: "2024-06-15",
   },
   {
     id: "2",
@@ -53,6 +64,7 @@ export const mockServicesData: Service[] = [
       "Bukti pendukung",
     ],
     views: 412,
+    lastUpdated: "2024-06-12",
   },
   {
     id: "3",
@@ -66,6 +78,7 @@ export const mockServicesData: Service[] = [
       "Surat Pernyataan Memiliki Usaha",
     ],
     views: 387,
+    lastUpdated: "2024-06-10",
   },
   {
     id: "4",
@@ -79,6 +92,7 @@ export const mockServicesData: Service[] = [
       "Informasi kontak pelapor",
     ],
     views: 231,
+    lastUpdated: "2024-06-08",
   },
   {
     id: "5",
@@ -88,6 +102,32 @@ export const mockServicesData: Service[] = [
     status: "maintenance",
     requirements: ["Fotokopi KTP", "Fotokopi KK", "SKTM", "Foto rumah"],
     views: 289,
+    lastUpdated: "2024-06-05",
+  },
+  {
+    id: "6",
+    name: "Pendaftaran UMKM",
+    category: "Ekonomi",
+    estimatedTime: "3-5 hari",
+    status: "draft",
+    requirements: [
+      "Fotokopi KTP",
+      "Foto usaha",
+      "Deskripsi usaha",
+      "NPWP (jika ada)",
+    ],
+    views: 0,
+    lastUpdated: "2024-06-18",
+  },
+  {
+    id: "7",
+    name: "Konsultasi Hukum",
+    category: "Posbakum",
+    estimatedTime: "1-2 hari",
+    status: "available",
+    requirements: ["Fotokopi KTP", "Dokumen pendukung (jika ada)"],
+    views: 176,
+    lastUpdated: "2024-06-07",
   },
 ];
 
@@ -97,6 +137,9 @@ const AdminServices = () => {
   const [services, setServices] = useState<Service[]>(mockServicesData);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
+  const [filterStatus, setFilterStatus] = useState<string>("all");
+  const [filterCategory, setFilterCategory] = useState<string>("all");
+  const [activeTab, setActiveTab] = useState<string>("all");
 
   const handleDelete = (id: string) => {
     setDeleteId(id);
@@ -114,6 +157,25 @@ const AdminServices = () => {
       setIsDeleteDialogOpen(false);
     }
   };
+
+  // Filter services based on selected filters
+  const filteredServices = services.filter((service) => {
+    // Filter by tab (status groups)
+    if (activeTab !== "all") {
+      if (activeTab === "available" && service.status !== "available")
+        return false;
+      if (activeTab === "maintenance" && service.status !== "maintenance")
+        return false;
+      if (activeTab === "draft" && service.status !== "draft") return false;
+    }
+
+    // Additional filters
+    if (filterStatus !== "all" && service.status !== filterStatus) return false;
+    if (filterCategory !== "all" && service.category !== filterCategory)
+      return false;
+
+    return true;
+  });
 
   // Define columns for the data table
   const columns: ColumnDef<Service>[] = [
@@ -144,17 +206,27 @@ const AdminServices = () => {
     {
       accessorKey: "status",
       header: "Status",
-      cell: ({ row }) => (
-        <Badge
-          className={
-            row.original.status === "available"
-              ? "bg-green-100 text-green-800 hover:bg-green-100"
-              : "bg-amber-100 text-amber-800 hover:bg-amber-100"
-          }
-        >
-          {row.original.status === "available" ? "Tersedia" : "Maintenance"}
-        </Badge>
-      ),
+      cell: ({ row }) => {
+        let statusClass = "";
+        let statusText = "";
+
+        switch (row.original.status) {
+          case "available":
+            statusClass = "bg-green-100 text-green-800 hover:bg-green-100";
+            statusText = "Tersedia";
+            break;
+          case "maintenance":
+            statusClass = "bg-amber-100 text-amber-800 hover:bg-amber-100";
+            statusText = "Maintenance";
+            break;
+          case "draft":
+            statusClass = "bg-blue-100 text-blue-800 hover:bg-blue-100";
+            statusText = "Draft";
+            break;
+        }
+
+        return <Badge className={statusClass}>{statusText}</Badge>;
+      },
     },
     {
       accessorKey: "requirements",
@@ -169,59 +241,44 @@ const AdminServices = () => {
     {
       accessorKey: "views",
       header: "Dilihat",
-      cell: ({ row }) => (
-        <div className="text-right">{row.original.views.toLocaleString()}</div>
-      ),
+      cell: ({ row }) => <div>{row.original.views}</div>,
+    },
+    {
+      accessorKey: "lastUpdated",
+      header: "Terakhir Diperbarui",
+      cell: ({ row }) => <div>{row.original.lastUpdated}</div>,
     },
     {
       id: "actions",
+      header: "Aksi",
       cell: ({ row }) => (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="1" />
-                <circle cx="12" cy="5" r="1" />
-                <circle cx="12" cy="19" r="1" />
-              </svg>
+              <span className="sr-only">Buka menu</span>
+              <Filter className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem
-              onClick={() =>
-                navigate(
-                  `/layanan/${row.original.category.toLowerCase()}/${
-                    row.original.id
-                  }/detail`
-                )
-              }
+              onClick={() => navigate(`/admin/layanan/${row.original.id}`)}
             >
-              <Eye className="h-4 w-4 mr-2" />
-              <span>Lihat</span>
+              <Eye className="mr-2 h-4 w-4" />
+              Lihat Detail
             </DropdownMenuItem>
             <DropdownMenuItem
               onClick={() => navigate(`/admin/layanan/edit/${row.original.id}`)}
             >
-              <Edit className="h-4 w-4 mr-2" />
-              <span>Edit</span>
+              <Edit className="mr-2 h-4 w-4" />
+              Edit
             </DropdownMenuItem>
+            <DropdownMenuSeparator />
             <DropdownMenuItem
-              className="text-red-600"
               onClick={() => handleDelete(row.original.id)}
+              className="text-red-600"
             >
-              <Trash2 className="h-4 w-4 mr-2" />
-              <span>Hapus</span>
+              <Trash2 className="mr-2 h-4 w-4" />
+              Hapus
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -230,8 +287,8 @@ const AdminServices = () => {
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">
             Manajemen Layanan
@@ -247,11 +304,80 @@ const AdminServices = () => {
         </Button>
       </div>
 
-      <DataTable
-        columns={columns}
-        data={services}
-        searchPlaceholder="Cari layanan..."
-      />
+      <Tabs
+        defaultValue="all"
+        value={activeTab}
+        onValueChange={setActiveTab}
+        className="w-full"
+      >
+        <TabsList className="mb-4">
+          <TabsTrigger value="all">Semua</TabsTrigger>
+          <TabsTrigger value="available">Tersedia</TabsTrigger>
+          <TabsTrigger value="maintenance">Maintenance</TabsTrigger>
+          <TabsTrigger value="draft">Draft</TabsTrigger>
+        </TabsList>
+        <TabsContent value="all" className="mt-0">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex gap-2">
+              <Select value={filterCategory} onValueChange={setFilterCategory}>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Filter Kategori" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Semua Kategori</SelectItem>
+                  <SelectItem value="Kependudukan">Kependudukan</SelectItem>
+                  <SelectItem value="Ekonomi">Ekonomi</SelectItem>
+                  <SelectItem value="Pembangunan">Pembangunan</SelectItem>
+                  <SelectItem value="Sosial">Sosial</SelectItem>
+                  <SelectItem value="Posbakum">Posbakum</SelectItem>
+                </SelectContent>
+              </Select>
+
+              <Select value={filterStatus} onValueChange={setFilterStatus}>
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Filter Status" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Semua Status</SelectItem>
+                  <SelectItem value="available">Tersedia</SelectItem>
+                  <SelectItem value="maintenance">Maintenance</SelectItem>
+                  <SelectItem value="draft">Draft</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <DataTable
+            columns={columns}
+            data={filteredServices}
+            searchPlaceholder="Cari layanan..."
+          />
+        </TabsContent>
+
+        <TabsContent value="available" className="mt-0">
+          <DataTable
+            columns={columns}
+            data={filteredServices}
+            searchPlaceholder="Cari layanan tersedia..."
+          />
+        </TabsContent>
+
+        <TabsContent value="maintenance" className="mt-0">
+          <DataTable
+            columns={columns}
+            data={filteredServices}
+            searchPlaceholder="Cari layanan maintenance..."
+          />
+        </TabsContent>
+
+        <TabsContent value="draft" className="mt-0">
+          <DataTable
+            columns={columns}
+            data={filteredServices}
+            searchPlaceholder="Cari layanan draft..."
+          />
+        </TabsContent>
+      </Tabs>
 
       <ConfirmDialog
         open={isDeleteDialogOpen}
