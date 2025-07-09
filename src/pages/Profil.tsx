@@ -382,7 +382,7 @@ const Profil = () => {
                         {
                           name: "M.ARIF",
                           title: "STAFF",
-                          photo: "https://dummyimage.com/300x200/fff/fff",
+                          photo: "/images/struktur/13.png",
                         },
                         {
                           name: "",
