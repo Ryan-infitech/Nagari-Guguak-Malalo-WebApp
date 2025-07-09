@@ -380,33 +380,22 @@ const TeamDeveloper = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section
-        className="relative py-20 bg-cover bg-center text-white"
-        style={{
-          backgroundImage: "url('gumalaa.png')",
-        }}
-      >
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Team Developer
-          </h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            Mahasiswa KKN UNP Guguak Malalo 2025 yang membangun platform digital
-            untuk Nagari
-          </p>
-        </div>
-      </section>
-
       {/* Team Members Section */}
-      <section className="py-16 bg-white">
+      <section className="py-1 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <div className="mb-1">
+              <img
+                src="/gumalawhitebgg.png"
+                alt="Guguak Malalo Logo"
+                className="mx-auto h-24 md:h-32"
+              />
+            </div>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Tim Pengembang
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Bertemu dengan mahasiswa-mahasiswa berbakat yang berdedikasi
+              Bertemu dengan mahasiswa-mahasiswi berbakat yang berdedikasi
               membangun platform digital untuk Nagari Guguak Malalo
             </p>
           </div>
