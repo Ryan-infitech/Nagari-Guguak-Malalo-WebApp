@@ -1,14 +1,18 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# *
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /portal-warga
+Disallow: /api
+Disallow: /login
+Disallow: /daftar
+Disallow: /reset-password
+Disallow: /verify-email
+
+# Host
+Host: http://localhost:3001/api/v1
+
+# Sitemaps
+Sitemap: http://localhost:3001/api/v1/sitemap.xml
+Sitemap: http://localhost:3001/api/v1/sitemap-pariwisata.xml
+Sitemap: http://localhost:3001/api/v1/sitemap-umkm.xml

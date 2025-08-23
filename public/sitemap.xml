@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>http://localhost:3001/api/v1/sitemap.xml</loc><lastmod>2025-08-21T23:23:22.005Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/robots.txt</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/manifest.webmanifest</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/daftar/verifikasi</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/kontak</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/informasi</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>http://localhost:3001/api/v1/layanan</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/profil</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/sitemap</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/team-developer</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/umkm</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/admin</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/pariwisata</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3001/api/v1/portal-warga</loc><lastmod>2025-08-21T23:23:22.006Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>
