@@ -1,0 +1,624 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Leaflet CSS */
+@import 'leaflet/dist/leaflet.css';
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+/* Custom brand colors for Nagari Guguak Malalo Portal */
+:root {
+  /* Primary Brand Colors */
+  --brand-primary: 214 95% 48%; /* Blue - Government official color */
+  --brand-primary-dark: 214 95% 42%;
+  --brand-primary-light: 214 95% 55%;
+
+  /* Secondary Brand Colors */
+  --brand-secondary: 142 71% 45%; /* Green - Nature/Agriculture */
+  --brand-secondary-dark: 142 71% 38%;
+  --brand-secondary-light: 142 71% 52%;
+
+  /* Accent Colors */
+  --brand-accent: 45 93% 58%; /* Gold - Traditional/Heritage */
+  --brand-accent-dark: 45 93% 50%;
+  --brand-accent-light: 45 93% 65%;
+
+  /* Neutral Colors */
+  --brand-gray: 220 13% 46%;
+  --brand-gray-light: 220 13% 91%;
+  --brand-gray-dark: 220 13% 26%;
+
+  /* Status Colors */
+  --brand-success: 142 71% 45%;
+  --brand-warning: 45 93% 58%;
+  --brand-danger: 0 84% 60%;
+  --brand-info: 214 95% 48%;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom utility classes */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bg-gradient-custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Brand Color Utilities */
+@layer utilities {
+  /* Primary Brand Colors */
+  .bg-brand-primary {
+    background-color: hsl(var(--brand-primary));
+  }
+
+  .bg-brand-primary-dark {
+    background-color: hsl(var(--brand-primary-dark));
+  }
+
+  .bg-brand-primary-light {
+    background-color: hsl(var(--brand-primary-light));
+  }
+
+  .text-brand-primary {
+    color: hsl(var(--brand-primary));
+  }
+
+  .border-brand-primary {
+    border-color: hsl(var(--brand-primary));
+  }
+
+  /* Secondary Brand Colors */
+  .bg-brand-secondary {
+    background-color: hsl(var(--brand-secondary));
+  }
+
+  .bg-brand-secondary-dark {
+    background-color: hsl(var(--brand-secondary-dark));
+  }
+
+  .text-brand-secondary {
+    color: hsl(var(--brand-secondary));
+  }
+
+  /* Accent Colors */
+  .bg-brand-accent {
+    background-color: hsl(var(--brand-accent));
+  }
+
+  .text-brand-accent {
+    color: hsl(var(--brand-accent));
+  }
+
+  /* Hover States */
+  .hover\:bg-brand-primary:hover {
+    background-color: hsl(var(--brand-primary-dark));
+  }
+
+  .hover\:bg-brand-secondary:hover {
+    background-color: hsl(var(--brand-secondary-dark));
+  }
+
+  /* Mobile Responsive Utilities */
+  .mobile-padding {
+    @apply px-2 sm:px-4;
+  }
+
+  .mobile-text {
+    @apply text-sm sm:text-base;
+  }
+
+  .mobile-button {
+    @apply px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base;
+  }
+
+  .mobile-grid {
+    @apply grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2;
+  }
+}
+
+/* Custom brand colors */
+.bg-brand-primary {
+  background-color: #7ca186;
+}
+
+.bg-brand-50 {
+  background-color: #f0f4f1;
+}
+
+.bg-brand-100 {
+  background-color: #d9e5dc;
+}
+
+.bg-brand-200 {
+  background-color: #b3cbb9;
+}
+
+.bg-brand-500 {
+  background-color: #7ca186;
+}
+
+.bg-brand-600 {
+  background-color: #6b8f73;
+}
+
+.bg-brand-700 {
+  background-color: #5a7d61;
+}
+
+.bg-brand-800 {
+  background-color: #4a6b50;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #7ca186 0%, #6b8f73 100%);
+}
+
+.bg-brand-gradient-dark {
+  background: linear-gradient(135deg, #6b8f73 0%, #5a7d61 100%);
+}
+
+.from-brand-50 {
+  --tw-gradient-from: #f0f4f1;
+}
+
+.to-brand-100 {
+  --tw-gradient-to: #d9e5dc;
+}
+
+.text-brand-primary {
+  color: #7ca186;
+}
+
+.text-brand-800 {
+  color: #4a6b50;
+}
+
+.border-brand-primary {
+  border-color: #7ca186;
+}
+
+.border-brand-200 {
+  border-color: #b3cbb9;
+}
+
+.border-t-brand-primary {
+  border-top-color: #7ca186;
+}
+
+.ring-brand-primary {
+  --tw-ring-color: #7ca186;
+}
+
+.hover\:bg-brand-primary:hover {
+  background-color: #7ca186;
+}
+
+.hover\:bg-brand-primary-dark:hover {
+  background-color: #6b8f73;
+}
+
+.hover\:bg-brand-dark:hover {
+  background-color: #6b8f73;
+}
+
+.hover\:bg-brand-50:hover {
+  background-color: #f0f4f1;
+}
+
+.hover\:text-brand-primary:hover {
+  color: #7ca186;
+}
+
+.hover\:from-brand-600:hover {
+  --tw-gradient-from: #6b8f73;
+}
+
+.hover\:to-brand-700:hover {
+  --tw-gradient-to: #5a7d61;
+}
+
+.hover\:from-brand-700:hover {
+  --tw-gradient-from: #5a7d61;
+}
+
+.hover\:to-brand-800:hover {
+  --tw-gradient-to: #4a6b50;
+}
+
+.hover\:bg-brand-gradient-dark:hover {
+  background: linear-gradient(135deg, #6b8f73 0%, #5a7d61 100%);
+}
+
+.from-brand-500 {
+  --tw-gradient-from: #7ca186;
+}
+
+.to-brand-600 {
+  --tw-gradient-to: #6b8f73;
+}
+
+.from-brand-primary {
+  --tw-gradient-from: #7ca186;
+}
+
+.to-brand-600 {
+  --tw-gradient-to: #6b8f73;
+}
+
+.from-brand-600 {
+  --tw-gradient-from: #6b8f73;
+}
+
+.to-brand-700 {
+  --tw-gradient-to: #5a7d61;
+}
+
+.from-brand-700 {
+  --tw-gradient-from: #5a7d61;
+}
+
+.to-brand-800 {
+  --tw-gradient-to: #4a6b50;
+}
+
+.focus\:ring-brand-primary:focus {
+  --tw-ring-color: rgba(124, 161, 134, 0.5);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Add styles to ensure content doesn't get hidden under fixed navbar */
+.page-wrapper {
+  padding-top: 0; /* No extra padding needed since we're using LayoutWrapper */
+}
+
+/* For pages without a hero section, add this class to the main content container */
+.content-below-navbar {
+  padding-top: 4rem; /* 64px for mobile - matches navbar height */
+}
+
+@media (min-width: 768px) {
+  .content-below-navbar {
+    padding-top: 5rem; /* 80px for tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-below-navbar {
+    padding-top: 6rem; /* 96px for desktop */
+  }
+}
+
+/* Hero section classes that account for navbar overlap */
+.hero-section {
+  @apply pt-20 md:pt-24 lg:pt-28;
+  min-height: calc(100vh - 5rem);
+}
+
+.hero-section-full {
+  @apply pt-20 md:pt-24 lg:pt-28;
+  min-height: 100vh;
+}
+
+.hero-section-compact {
+  @apply pb-12 pt-20 md:pb-16 md:pt-24 lg:pt-28;
+}
+
+/* Ensure proper scrolling in admin pages */
+.admin-page {
+  min-height: 100%;
+  padding: 1.5rem;
+}
+
+/* Fix double scrollbar issues */
+.admin-content-wrapper {
+  height: 100%;
+  overflow: visible;
+}
+
+/* Admin sidebar scrolling */
+.admin-sidebar {
+  height: 100vh;
+}
+
+.admin-sidebar nav {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Mobile responsiveness utilities */
+@layer utilities {
+  .prevent-horizontal-scroll {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .mobile-safe-width {
+    width: calc(100vw - 2rem);
+    max-width: 100%;
+  }
+
+  .text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Table utilities */
+  .table-fixed-responsive {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .table-fixed-responsive th,
+  .table-fixed-responsive td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Ensure no horizontal overflow on mobile */
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+/* Leaflet Map Styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Ensure Leaflet controls don't conflict with dialog z-index */
+.leaflet-control-container {
+  z-index: 800;
+}
+
+/* Fix for Leaflet marker icons */
+.leaflet-default-icon-path {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png');
+}
+
+/* Custom popup styles */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.leaflet-popup-tip {
+  background: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Styles */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Masonry gallery animation */
+  .gallery-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Professional hover effects */
+  .photo-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 10;
+  }
+
+  /* Gallery item hover state */
+  .gallery-item:hover .photo-overlay {
+    pointer-events: auto;
+  }
+
+  /* Smooth transitions for gallery */
+  .gallery-transition {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* Modal backdrop blur */
+  .modal-backdrop {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
