@@ -15,6 +15,12 @@
   [![Zustand](https://img.shields.io/badge/Zustand-4.5-orange?style=for-the-badge)](https://github.com/pmndrs/zustand)
 </div>
 
+<div align="center">
+
+![gif preview](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/preview.gif?raw=true)
+
+</div>
+
 ## 📋 Daftar Isi
 
 - [🎯 Overview](#-overview)
