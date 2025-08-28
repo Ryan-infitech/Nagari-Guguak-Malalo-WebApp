@@ -1,433 +1,770 @@
-# 🏛️ Portal Nagari Guguak Malalo - Frontend
+# 🏛️ Portal Nagari Guguak Malalo
 
-Portal Resmi Nagari Guguak Malalo yang menyediakan layanan publik digital untuk masyarakat Kabupaten Tanah Datar, Sumatera Barat.
-
-[![Next.js](https://img.shields.io/badge/Next.js-15.3.5-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-18.2-blue?style=flat-square&logo=react)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-
-## 🎯 Overview
-
-Portal ini menyediakan layanan digital untuk:
-- **Layanan Publik**: Surat keterangan, perizinan, dan dokumentasi
-- **Informasi Nagari**: Berita, pengumuman, dan profil daerah
-- **Pariwisata**: Destinasi wisata dan promosi potensi daerah
-- **UMKM**: Pendaftaran dan promosi usaha mikro kecil menengah
-- **Portal Warga**: Dashboard pribadi untuk layanan resident
-
-## ✨ Key Features
-
-### 🔐 Authentication & Authorization
-- JWT-based authentication dengan refresh token
-- Role-based access control (RBAC)
-- Route protection dengan middleware
-- Session management yang aman
-
-### 🎨 Modern UI/UX
-- Responsive design untuk semua device
-- Dark/Light theme dengan system preference
-- Component library dengan Radix UI & shadcn/ui
-- Smooth animations dengan Tailwind CSS
-
-### ⚡ Performance & Optimization
-- Next.js 15 dengan App Router
-- Server-side rendering (SSR) dan Static Site Generation (SSG)
-- Image optimization dengan Next.js Image
-- Bundle optimization dan code splitting
-
-### 🔄 State Management
-- React Query untuk server state
-- Zustand untuk client state
-- Form handling dengan React Hook Form
-- Real-time updates dengan WebSocket support
-
-### 🛡️ Security & Best Practices
-- TypeScript untuk type safety
-- Input validation dengan Zod
-- Security headers dan CSP
-- Rate limiting dan CORS protection
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js >= 18.0.0
-- npm >= 8.0.0
-- Git
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-org/nagari-guguak-malalo.git
-   cd nagari-guguak-malalo/frontend
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Environment setup**
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
-
-4. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open in browser**
-   ```
-   http://localhost:3000
-   ```
-
-## 🛠️ Development
-
-### Available Scripts
-
-```bash
-# Development
-npm run dev                    # Start development server
-npm run build                  # Build for production
-npm run start                  # Start production server
-
-# Code Quality
-npm run lint                   # Run ESLint
-npm run lint:fix              # Fix ESLint issues
-npm run type-check             # TypeScript type checking
-npm run format                 # Format with Prettier
-npm run format:check           # Check formatting
-
-# Testing
-npm run test                   # Run tests
-npm run test:watch             # Run tests in watch mode
-npm run test:coverage          # Run tests with coverage
-
-# Analysis
-npm run analyze                # Bundle analyzer
-```
-
-### Project Structure
-
-```
-frontend/
-├── src/
-│   ├── app/                   # Next.js App Router pages
-│   ├── api/                   # API client & services
-│   ├── components/            # React components
-│   │   ├── ui/               # Base UI components
-│   │   ├── admin/            # Admin dashboard components
-│   │   ├── portal-warga/     # Citizen portal components
-│   │   ├── common/           # Shared components
-│   │   └── forms/            # Form components
-│   ├── hooks/                # Custom React hooks
-│   │   ├── api/              # API hooks
-│   │   └── ui/               # UI hooks
-│   ├── store/                # Global state (Zustand)
-│   ├── utils/                # Utility functions
-│   ├── providers/            # React providers
-│   ├── types/                # TypeScript type definitions
-│   └── lib/                  # Shared libraries
-├── public/                   # Static assets
-└── ...config files
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Key environment variables in `.env.local`:
-
-```bash
-# API Configuration
-NEXT_PUBLIC_API_URL=http://localhost:3001/api
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-
-# Application
-NEXT_PUBLIC_APP_NAME="Portal Nagari Guguak Malalo"
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-
-# Authentication
-JWT_SECRET=your-jwt-secret
-NEXTAUTH_SECRET=your-nextauth-secret
-
-# Features
-NEXT_PUBLIC_ENABLE_ANALYTICS=true
-NEXT_PUBLIC_ENABLE_NOTIFICATIONS=true
-NEXT_PUBLIC_DEBUG_MODE=true
-```
-
-See `.env.example` for complete configuration options.
-
-### API Integration
-
-The frontend integrates with the backend API:
-
-```typescript
-// API Client Example
-import { apiClient } from '@/api/client';
-
-const response = await apiClient.get('/articles');
-```
-
-## 🎨 UI Components
-
-Built with modern component libraries:
-
-- **Radix UI**: Headless UI primitives
-- **shadcn/ui**: Beautiful component collection
-- **Tailwind CSS**: Utility-first CSS framework
-- **Lucide React**: Beautiful icons
-
-### Example Usage
-
-```tsx
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-
-function MyComponent() {
-  return (
-    <Card>
-      <CardHeader>
-        <h2>Portal Warga</h2>
-      </CardHeader>
-      <CardContent>
-        <Button>Ajukan Surat</Button>
-      </CardContent>
-    </Card>
-  );
-}
-```
-
-## 📱 Features Overview
-
-### Public Features
-- **Homepage**: Hero section, news, quick services
-- **Informasi**: News, announcements, village profile
-- **Layanan**: Public services catalog
-- **Pariwisata**: Tourism destinations and packages
-- **UMKM**: Business directory and registration
-- **Kontak**: Contact information and feedback
-
-### Authenticated Features
-- **Portal Warga**: Personal dashboard for residents
-- **Document Services**: Request certificates and permits
-- **Notifications**: Real-time updates and alerts
-- **Profile Management**: Update personal information
-
-### Admin Features
-- **Dashboard**: Analytics and overview
-- **Content Management**: Articles, announcements, events
-- **User Management**: Resident data and permissions
-- **Tourism Management**: Destinations and packages
-- **UMKM Management**: Business registration and data
-- **System Settings**: Configuration and maintenance
-
-## 🔐 Authentication Flow
-
-1. **Login**: Email/password authentication
-2. **JWT Tokens**: Access token + refresh token
-3. **Role-based Access**: Different permissions per role
-4. **Session Management**: Automatic token refresh
-5. **Logout**: Token invalidation and cleanup
-
-### User Roles
-
-- **SUPER_ADMIN**: Full system access
-- **ADMIN**: Administrative privileges
-- **MODERATOR**: Content moderation
-- **STAFF**: Limited admin access
-- **RESIDENT**: Citizen portal access
-- **BUSINESS_OWNER**: UMKM features
-- **VISITOR**: Public access only
-
-## 📊 Performance
-
-### Optimization Strategies
-
-- **Code Splitting**: Automatic with Next.js
-- **Image Optimization**: Next.js Image component
-- **Caching**: React Query for server state
-- **Bundle Size**: Tree shaking and dead code elimination
-- **SEO**: Server-side rendering and meta tags
-
-### Monitoring
-
-- **Bundle Analyzer**: `npm run analyze`
-- **Lighthouse**: Performance auditing
-- **React Query Devtools**: State inspection
-- **TypeScript**: Compile-time error detection
-
-## 🔄 State Management
-
-### Client State (Zustand)
-```typescript
-import { useAuthStore } from '@/store/authStore';
-
-function MyComponent() {
-  const { user, login, logout } = useAuthStore();
-  // Component logic
-}
-```
-
-### Server State (React Query)
-```typescript
-import { useArticles } from '@/hooks/api/useArticles';
-
-function ArticlesList() {
-  const { data: articles, isLoading } = useArticles();
-  // Component logic
-}
-```
-
-## 📋 API Integration
-
-### Service Layer Architecture
-
-```typescript
-// Service example
-export class ArticleService {
-  async getArticles(params?: GetArticlesParams): Promise<Article[]> {
-    const response = await apiClient.get('/articles', { params });
-    return response.data;
-  }
+<div align="center">
+  <img src="./public/logofixnagari.png" alt="Logo Nagari Guguak Malalo" width="200"/>
   
-  async createArticle(data: CreateArticleData): Promise<Article> {
-    const response = await apiClient.post('/articles', data);
-    return response.data;
-  }
-}
-```
+  **Portal Digital Resmi Nagari Guguak Malalo**  
+  *Sistem Informasi Pelayanan Publik Digital*
+  
+  Kabupaten Tanah Datar, Sumatera Barat
+</div>
 
-### Custom Hooks Pattern
+<div align="center">
 
-```typescript
-// Hook example
-export function useArticles(params?: GetArticlesParams) {
-  return useQuery({
-    queryKey: ['articles', params],
-    queryFn: () => articleService.getArticles(params),
-    staleTime: 5 * 60 * 1000, // 5 minutes
-  });
-}
-```
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.5-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18.2-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.18+-lightgrey?style=for-the-badge&logo=express)](https://expressjs.com/)
+[![Prisma](https://img.shields.io/badge/Prisma-5.8+-purple?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## 🧪 Testing
-
-### Testing Strategy
-
-- **Unit Tests**: Component and utility testing
-- **Integration Tests**: API and workflow testing
-- **E2E Tests**: Full user journey testing
-- **Visual Tests**: UI consistency checking
-
-### Example Test
-
-```typescript
-import { render, screen } from '@testing-library/react';
-import { Button } from '@/components/ui/button';
-
-test('renders button with text', () => {
-  render(<Button>Click me</Button>);
-  expect(screen.getByText('Click me')).toBeInTheDocument();
-});
-```
-
-## 🚀 Deployment
-
-### Production Build
-
-```bash
-npm run build
-npm run start
-```
-
-### Environment Setup
-
-1. Set production environment variables
-2. Configure API endpoints
-3. Set up CDN for static assets
-4. Configure monitoring and analytics
-
-### Docker Deployment
-
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
-## 🤝 Contributing
-
-### Development Workflow
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
-
-### Code Standards
-
-- **TypeScript**: Strict mode enabled
-- **ESLint**: Extended rules for React and Next.js
-- **Prettier**: Code formatting with Tailwind plugin
-- **Conventional Commits**: Standardized commit messages
-
-## 📚 Documentation
-
-- **API Documentation**: Available in `/api` endpoints
-- **Component Storybook**: Visual component documentation
-- **Type Definitions**: Comprehensive TypeScript interfaces
-- **HOW-TO Guides**: Common development scenarios
-
-## 🛡️ Security
-
-### Security Measures
-
-- **Authentication**: JWT with refresh tokens
-- **Authorization**: Role-based access control
-- **Input Validation**: Zod schema validation
-- **Security Headers**: CSP, HSTS, XSS protection
-- **Rate Limiting**: API request limiting
-- **HTTPS**: SSL/TLS encryption in production
-
-## 📞 Support
-
-### Getting Help
-
-- **Documentation**: Check this README and code comments
-- **Issues**: GitHub Issues for bug reports
-- **Discussions**: GitHub Discussions for questions
-- **Email**: tech@guguakmalalo.id
-
-### Project Maintainers
-
-- **Lead Developer**: [Your Name]
-- **UI/UX Designer**: [Designer Name]
-- **Backend Developer**: [Backend Dev Name]
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Next.js Team**: Amazing React framework
-- **Vercel**: Hosting and deployment platform
-- **Radix UI**: Accessible UI primitives
-- **Tailwind CSS**: Utility-first CSS framework
-- **shadcn/ui**: Beautiful component library
+</div>
 
 ---
 
-**Portal Nagari Guguak Malalo** - Membangun desa digital yang maju dan berkeadilan 🏛️✨
+## 📋 Daftar Isi
+
+- [🎯 Overview](#-overview)
+- [✨ Fitur Utama](#-fitur-utama)
+- [🛠️ Teknologi](#️-teknologi)
+- [📁 Arsitektur Sistem](#-arsitektur-sistem)
+- [🚀 Demo & Preview](#-demo--preview)
+- [📖 Dokumentasi](#-dokumentasi)
+- [🤝 Contributing](#-contributing)
+- [📞 Kontak](#-kontak)
+- [📄 Lisensi](#-lisensi)
+
+## 🎯 Overview
+
+**Portal Nagari Guguak Malalo** adalah sistem informasi pelayanan publik digital yang modern dan komprehensif, dikembangkan khusus untuk melayani kebutuhan warga Nagari Guguak Malalo, Kecamatan Lima Kaum, Kabupaten Tanah Datar, Sumatera Barat.
+
+### 🎯 Visi & Misi
+
+**Visi**: Menjadi portal digital terdepan yang memberikan pelayanan publik yang efisien, transparan, dan berkelanjutan untuk kemajuan Nagari Guguak Malalo.
+
+**Misi**:
+- 🏛️ Digitalisasi penuh layanan pemerintahan nagari
+- 🏪 Pemberdayaan ekonomi lokal melalui platform UMKM
+- 🏖️ Promosi potensi pariwisata daerah yang berkelanjutan
+- 📊 Peningkatan transparansi dan akuntabilitas pemerintahan
+- 👥 Kemudahan akses informasi dan layanan bagi seluruh warga
+
+### 🌐 Layanan Digital
+
+Portal ini menyediakan ekosistem layanan digital lengkap:
+
+- **🏛️ Layanan Pemerintahan**: Surat keterangan, perizinan, dan dokumentasi resmi
+- **📢 Informasi Publik**: Berita terkini, pengumuman resmi, dan profil daerah
+- **🏖️ Pariwisata**: Destinasi wisata unggulan dan paket promosi potensi daerah
+- **🏪 UMKM**: Platform pendaftaran, verifikasi, dan promosi usaha mikro kecil menengah
+- **👥 Portal Warga**: Dashboard pribadi untuk layanan resident terintegrasi
+- **📊 Analytics**: Dashboard analitik dan pelaporan untuk transparansi administrasi
+
+## ✨ Fitur Utama
+
+### 🔐 Sistem Autentikasi & Keamanan
+- **JWT Authentication**: Token-based authentication dengan refresh token otomatis
+- **Role-Based Access Control**: 7 level user dengan permission yang granular
+  - `SUPER_ADMIN` - Full system access
+  - `ADMIN` - Administrative privileges
+  - `MODERATOR` - Content moderation
+  - `STAFF` - Limited admin access
+  - `RESIDENT` - Citizen portal access
+  - `BUSINESS_OWNER` - UMKM features
+  - `VISITOR` - Public access only
+- **Advanced Security**: Rate limiting, CORS protection, security headers
+- **Session Management**: Secure session handling dengan enkripsi data
+
+### 🏛️ Layanan Pemerintahan Digital
+- **📋 Administrasi Kependudukan**: Pengelolaan data penduduk terintegrasi
+- **📄 Pelayanan Dokumen**: Surat Keterangan, Surat Domisili, SKTM, dan dokumen resmi lainnya
+- **🔄 Service Request Management**: Sistem tracking permintaan layanan real-time
+- **📑 Document Generation**: Auto-generate dokumen dengan template yang customizable
+- **📊 Dashboard Analytics**: Statistik komprehensif layanan pemerintahan
+
+### 📰 Manajemen Konten & Informasi
+- **📝 Article Management**: Sistem artikel dengan kategori, tag, dan SEO optimization
+- **📢 Announcement System**: Pengumuman resmi dengan scheduling dan targeting
+- **🎪 Event Management**: Manajemen acara dan sistem registrasi online
+- **✅ Content Moderation**: Review dan approval system untuk konten
+- **🔍 Advanced Search**: Pencarian konten dengan filter dan kategorisasi
+
+### 🏪 UMKM & Pemberdayaan Ekonomi
+- **🏬 UMKM Directory**: Database usaha mikro kecil menengah yang komprehensif
+- **📋 Business Registration**: Sistem pendaftaran dan verifikasi UMKM online
+- **📦 Product Showcase**: Katalog produk dengan sistem review dan rating
+- **📈 Program UMKM**: Manajemen program pemberdayaan dan pelatihan
+- **📊 Business Analytics**: Laporan perkembangan dan statistik UMKM
+
+### 🏖️ Pariwisata & Promosi Daerah
+- **🗺️ Tourism Destinations**: Database destinasi wisata dengan maps interaktif
+- **🎫 Tourism Packages**: Paket wisata dan sistem booking online
+- **📸 Photo Gallery**: Galeri foto destinasi dengan geolocation
+- **⭐ Review & Rating**: Sistem review destinasi wisata dari pengunjung
+- **📱 Mobile-Optimized**: Experience optimal untuk tourist mobile
+
+### 🎨 Modern UI/UX Experience
+- **📱 Responsive Design**: Mobile-first approach untuk semua device
+- **🌙 Dark/Light Theme**: Automatic system preference detection
+- **🎭 Accessible Design**: WCAG 2.1 compliance dan screen reader support
+- **⚡ Smooth Animations**: Framer Motion dan Tailwind CSS animations
+- **🔄 Progressive Web App**: PWA capabilities untuk pengalaman native
+
+### ⚡ Performance & Optimization
+- **🚀 Next.js 15**: App Router dengan React Server Components
+- **🏗️ SSR/SSG**: Server-side rendering dan Static Site Generation
+- **🖼️ Image Optimization**: Next.js Image dengan lazy loading
+- **📦 Bundle Optimization**: Code splitting, tree shaking, dan smart caching
+- **🔄 Real-time Updates**: WebSocket integration untuk update real-time
+
+### 📧 Sistem Notifikasi & Komunikasi
+- **🔔 Real-time Notifications**: WebSocket untuk notifikasi instant
+- **� Email Templates**: Template email yang customizable dan responsive
+- **📱 Multi-channel**: Email, SMS, dan push notifications
+- **⚙️ Notification Preferences**: Pengaturan preferensi notifikasi per user
+- **📊 Delivery Tracking**: Tracking status pengiriman notifikasi
+
+## �️ Teknologi
+
+### 🎨 Frontend Stack
+- **⚛️ [Next.js 15](https://nextjs.org/)** - React framework dengan App Router dan Server Components
+- **⚛️ [React 18.2](https://reactjs.org/)** - UI library dengan Concurrent Features
+- **📘 [TypeScript 5.0](https://www.typescriptlang.org/)** - Type-safe JavaScript superset
+- **🎨 [Tailwind CSS 3.4](https://tailwindcss.com/)** - Utility-first CSS framework
+- **🧩 [Shadcn/ui](https://ui.shadcn.com/)** - Modern component library
+- **🔗 [Radix UI](https://www.radix-ui.com/)** - Headless accessible UI primitives
+- **🎭 [Framer Motion](https://www.framer.com/motion/)** - Animation library
+- **📊 [TanStack Query](https://tanstack.com/query/latest)** - Server state management
+- **🐻 [Zustand](https://github.com/pmndrs/zustand)** - Lightweight client state
+- **🎯 [React Hook Form](https://react-hook-form.com/)** - Performant form handling
+- **✅ [Zod](https://zod.dev/)** - TypeScript schema validation
+
+### 🚀 Backend Stack
+- **🟢 [Node.js 18+](https://nodejs.org/)** - JavaScript runtime environment
+- **⚡ [Express.js 4.18+](https://expressjs.com/)** - Web application framework
+- **📘 [TypeScript 5.3+](https://www.typescriptlang.org/)** - Type-safe backend development
+- **🗄️ [PostgreSQL](https://www.postgresql.org/)** - Relational database via Supabase
+- **🔗 [Prisma 5.8+](https://www.prisma.io/)** - Next-generation ORM
+- **🔐 [JWT](https://jwt.io/)** - JSON Web Token authentication
+- **🔒 [BCrypt](https://github.com/kelektiv/node.bcrypt.js)** - Password hashing
+- **📧 [Nodemailer](https://nodemailer.com/)** - Email service integration
+- **🔌 [Socket.IO](https://socket.io/)** - Real-time communication
+- **☁️ [Supabase](https://supabase.com/)** - Backend-as-a-Service platform
+
+### 🛡️ Security & DevOps
+- **🛡️ [Helmet.js](https://helmetjs.github.io/)** - Security headers middleware
+- **🌐 [CORS](https://github.com/expressjs/cors)** - Cross-Origin Resource Sharing
+- **⏱️ [Rate Limiting](https://github.com/nfriedly/express-rate-limit)** - API request throttling
+- **📝 [Winston](https://github.com/winstonjs/winston)** - Logging library
+- **🐳 [Docker](https://www.docker.com/)** - Containerization
+- **🚄 [Railway](https://railway.app/)** - Cloud deployment platform
+
+### 🔧 Development Tools
+- **📏 [ESLint](https://eslint.org/)** - Code linting dengan custom rules
+- **💄 [Prettier](https://prettier.io/)** - Code formatting yang konsisten
+- **🐕 [Husky](https://typicode.github.io/husky/)** - Git hooks untuk quality gates
+- **🃏 [Jest](https://jestjs.io/)** - JavaScript testing framework
+- **🎭 [Playwright](https://playwright.dev/)** - End-to-end testing
+- **📊 [Bundle Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)** - Bundle size analysis
+
+### 📊 Monitoring & Analytics
+- **📈 [Built-in Analytics](/)** - Custom analytics dashboard
+- **📝 [Structured Logging](/)** - Comprehensive logging system
+- **⚡ [Performance Monitoring](/)** - Real-time performance metrics
+- **🔍 [Error Tracking](/)** - Comprehensive error logging
+- **📊 [User Behavior Tracking](/)** - User interaction analytics
+
+## � Arsitektur Sistem
+
+### 🏗️ Arsitektur Aplikasi
+
+Portal Nagari Guguak Malalo dibangun dengan arsitektur **microservices** modern yang scalable dan maintainable:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    🌐 FRONTEND                          │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │   Next.js   │  │   React     │  │ TypeScript  │     │
+│  │   App       │  │ Components  │  │   Types     │     │
+│  │   Router    │  │             │  │             │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │ TanStack    │  │   Zustand   │  │  Tailwind   │     │
+│  │   Query     │  │   Store     │  │    CSS      │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+└─────────────────────────────────────────────────────────┘
+                              │
+                         📡 API Calls
+                              │
+┌─────────────────────────────────────────────────────────┐
+│                    🚀 BACKEND                           │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │  Express.js │  │   Node.js   │  │ TypeScript  │     │
+│  │ Middleware  │  │   Runtime   │  │   Types     │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │   Prisma    │  │    JWT      │  │  Socket.IO  │     │
+│  │     ORM     │  │    Auth     │  │ WebSockets  │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+└─────────────────────────────────────────────────────────┘
+                              │
+                        🗄️ Database
+                              │
+┌─────────────────────────────────────────────────────────┐
+│                  ☁️ SUPABASE                            │
+│                                                         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │ PostgreSQL  │  │   Storage   │  │   Auth      │     │
+│  │  Database   │  │   Bucket    │  │  Service    │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 🔄 Data Flow Architecture
+
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│    USER     │    │  FRONTEND   │    │   BACKEND   │
+│ Interaction │───▶│  Component  │───▶│    API      │
+└─────────────┘    └─────────────┘    └─────────────┘
+                           │                   │
+                           │                   ▼
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│   UI State  │◀───│  TanStack   │    │ Business    │
+│   Update    │    │   Query     │◀───│   Logic     │
+└─────────────┘    └─────────────┘    └─────────────┘
+                                              │
+                                              ▼
+                                     ┌─────────────┐
+                                     │  Database   │
+                                     │ Operations  │
+                                     └─────────────┘
+```
+
+### 📦 Repository Structure
+
+Project ini menggunakan **multi-repository approach** untuk better scalability:
+
+```
+📦 Portal Nagari Guguak Malalo
+├── 📁 Frontend Repository (Private)
+│   ├── 🎨 User Interface Components
+│   ├── 📱 Pages & Routing
+│   ├── 🔄 State Management
+│   └── 🎯 API Integration
+│
+├── 📁 Backend Repository (Private)
+│   ├── 🚀 API Endpoints
+│   ├── 🔐 Authentication System
+│   ├── 💾 Database Models
+│   └── 📧 Services & Jobs
+│
+└── 📁 Public Repository (This Repo)
+    ├── 📖 Documentation
+    ├── 🎯 Project Overview
+    ├── 🔧 Setup Guides
+    └── 📊 Analytics
+```
+
+### 🔐 Security Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                 🛡️ SECURITY LAYERS                      │
+├─────────────────────────────────────────────────────────┤
+│ 🌐 Frontend Security                                    │
+│   • Input Validation (Zod)                             │
+│   • XSS Protection                                     │
+│   • CSRF Protection                                    │
+│   • Secure Token Storage                               │
+├─────────────────────────────────────────────────────────┤
+│ 🚀 Backend Security                                     │
+│   • JWT Authentication                                 │
+│   • Rate Limiting                                      │
+│   • CORS Configuration                                 │
+│   • Security Headers (Helmet.js)                       │
+├─────────────────────────────────────────────────────────┤
+│ 🗄️ Database Security                                    │
+│   • Encrypted Connections                              │
+│   • Role-based Access                                  │
+│   • Query Parameterization                             │
+│   • Data Encryption at Rest                            │
+└─────────────────────────────────────────────────────────┘
+```
+
+## � Demo & Preview
+
+### 🌟 Live Demo
+
+> **🚧 Coming Soon**: Demo environment sedang dalam tahap persiapan
+
+Portal akan tersedia dalam beberapa environment:
+
+- **🌐 Production**: `https://portal.guguakmalalo.id` *(Coming Soon)*
+- **🧪 Staging**: `https://staging.guguakmalalo.id` *(Coming Soon)*
+- **📱 Mobile Demo**: PWA-enabled untuk pengalaman mobile optimal
+
+### 📸 Screenshots Preview
+
+<details>
+<summary>🏠 <strong>Homepage & Public Pages</strong></summary>
+
+- **Hero Section**: Informasi utama dengan quick access ke layanan
+- **News Section**: Berita terkini dan pengumuman resmi
+- **Quick Services**: Akses cepat ke layanan populer
+- **Tourism Showcase**: Highlight destinasi wisata unggulan
+- **UMKM Directory**: Directory usaha lokal dengan search & filter
+
+</details>
+
+<details>
+<summary>👥 <strong>Portal Warga (Citizen Dashboard)</strong></summary>
+
+- **Personal Dashboard**: Overview layanan dan status dokumen
+- **Document Request**: Form pengajuan surat dan dokumen
+- **Service History**: Riwayat penggunaan layanan
+- **Profile Management**: Pengelolaan data pribadi
+- **Notifications**: Update real-time status layanan
+
+</details>
+
+<details>
+<summary>🏛️ <strong>Admin Dashboard</strong></summary>
+
+- **Analytics Dashboard**: Statistik komprehensif penggunaan portal
+- **Content Management**: Pengelolaan artikel, pengumuman, event
+- **User Management**: Administrasi pengguna dan permission
+- **Document Processing**: Review dan approval dokumen
+- **System Configuration**: Pengaturan sistem dan maintenance
+
+</details>
+
+<details>
+<summary>🏪 <strong>UMKM Platform</strong></summary>
+
+- **Business Registration**: Formulir pendaftaran UMKM
+- **Product Catalog**: Showcase produk dengan foto dan deskripsi
+- **Analytics**: Statistik performa bisnis dan engagement
+- **Program Participation**: Akses ke program pemberdayaan
+- **Review & Rating**: Sistem feedback dari pelanggan
+
+</details>
+
+<details>
+<summary>🏖️ <strong>Tourism Platform</strong></summary>
+
+- **Interactive Maps**: Peta destinasi wisata dengan geolocation
+- **Photo Gallery**: Galeri foto high-quality destinasi
+- **Booking System**: Sistem reservasi paket wisata
+- **Review System**: Review dan rating dari pengunjung
+- **Event Calendar**: Kalender acara dan festival
+
+</details>
+
+### 📱 Mobile Experience
+
+Portal dioptimalkan untuk pengalaman mobile yang excellent:
+
+- **📱 Responsive Design**: Adaptif untuk semua ukuran layar
+- **⚡ Fast Loading**: Optimized untuk koneksi lambat
+- **👆 Touch-Friendly**: Interface yang mudah digunakan di mobile
+- **🔄 Offline Support**: PWA dengan offline capabilities
+- **📲 App-like Experience**: Native-like experience di mobile browser
+
+### 🎯 Key Features Demo
+
+| Feature | Status | Description |
+|---------|--------|-------------|
+| 🔐 Authentication | ✅ Ready | JWT-based dengan multi-role support |
+| 🏛️ Government Services | ✅ Ready | Digital document request system |
+| 📰 Content Management | ✅ Ready | Article & announcement system |
+| 🏪 UMKM Platform | ✅ Ready | Business registration & showcase |
+| 🏖️ Tourism Platform | ✅ Ready | Destination & booking system |
+| 👥 Citizen Portal | ✅ Ready | Personal dashboard untuk warga |
+| 📊 Analytics Dashboard | ✅ Ready | Comprehensive reporting system |
+| 🔔 Real-time Notifications | ✅ Ready | WebSocket-based notifications |
+| 📱 PWA Support | ✅ Ready | Progressive Web App capabilities |
+| 🌐 SEO Optimization | ✅ Ready | Search engine optimized |
+
+## 📖 Dokumentasi
+
+### 📚 Dokumentasi Lengkap
+
+Dokumentasi komprehensif tersedia untuk developers dan administrator:
+
+#### 🔧 Development Documentation
+- **Frontend Documentation**: [README FRONTEND.md](./README%20FRONTEND.md)
+  - Panduan setup development environment
+  - Component development guidelines
+  - State management patterns
+  - API integration best practices
+  
+- **Backend Documentation**: [README BACKEND.md](./README%20BACKEND.md)
+  - API endpoint documentation
+  - Database schema dan relationships
+  - Authentication & security implementation
+  - Deployment & production configuration
+
+#### 📖 User Guides
+- **Admin User Guide**: Panduan lengkap untuk administrator
+- **Citizen Portal Guide**: Tutorial penggunaan portal warga
+- **UMKM Registration Guide**: Panduan pendaftaran dan pengelolaan UMKM
+- **Tourism Guide**: Cara menggunakan fitur pariwisata
+
+#### 🛠️ Technical Documentation
+- **API Reference**: Dokumentasi lengkap REST API endpoints
+- **Database Schema**: ERD dan relationship documentation
+- **Security Guidelines**: Best practices keamanan sistem
+- **Deployment Guide**: Panduan deployment production
+
+### 🎯 Quick Start Guides
+
+<details>
+<summary>👨‍💻 <strong>For Developers</strong></summary>
+
+**Prerequisites**:
+- Node.js >= 18.0.0
+- npm >= 8.0.0
+- Git
+- PostgreSQL (via Supabase)
+
+**Frontend Setup**:
+```bash
+# Clone repository
+git clone [private-frontend-repo]
+cd frontend
+
+# Install dependencies
+npm install
+
+# Setup environment
+cp .env.example .env.local
+# Edit .env.local dengan konfigurasi yang sesuai
+
+# Start development
+npm run dev
+```
+
+**Backend Setup**:
+```bash
+# Clone repository
+git clone [private-backend-repo]
+cd backend
+
+# Install dependencies
+npm install
+
+# Setup database
+npx prisma migrate dev
+npx prisma db seed
+
+# Start development
+npm run dev
+```
+
+</details>
+
+<details>
+<summary>🏛️ <strong>For Administrators</strong></summary>
+
+**System Requirements**:
+- Browser modern (Chrome, Firefox, Safari, Edge)
+- Koneksi internet stabil
+- Akses admin account
+
+**Initial Setup**:
+1. Login dengan akun SUPER_ADMIN
+2. Konfigurasi basic settings di Admin Dashboard
+3. Setup user roles dan permissions
+4. Import data initial (opsional)
+5. Test semua fitur core
+
+**Daily Operations**:
+- Content moderation & approval
+- User management & verification
+- Document processing & approval
+- System monitoring & maintenance
+
+</details>
+
+<details>
+<summary>👥 <strong>For End Users</strong></summary>
+
+**Akses Portal**:
+1. Kunjungi website resmi
+2. Daftar akun baru atau login
+3. Lengkapi profil personal
+4. Mulai gunakan layanan digital
+
+**Layanan Tersedia**:
+- Pengajuan dokumen online
+- Akses informasi terkini
+- Registrasi UMKM
+- Eksplorasi destinasi wisata
+- Feedback & komunikasi dengan pemerintah
+
+</details>
+
+### 📊 Performance & Monitoring
+
+#### ⚡ Performance Metrics
+- **Page Load Time**: Target < 3 detik
+- **First Contentful Paint**: Target < 1.5 detik
+- **Time to Interactive**: Target < 5 detik
+- **Lighthouse Score**: Target > 90
+
+#### 📈 Monitoring Dashboard
+- **Uptime Monitoring**: 99.9% availability target
+- **Error Tracking**: Real-time error monitoring
+- **User Analytics**: Comprehensive usage statistics
+- **Performance Alerts**: Automated alert system
+
+#### 🔍 Available Metrics
+- User engagement dan behavior
+- Service usage statistics
+- Document processing metrics
+- System performance data
+- Security event monitoring
+
+### 🛡️ Security Features
+
+#### 🔐 Authentication & Authorization
+- **Multi-factor Authentication**: Untuk admin accounts
+- **Session Management**: Secure session handling
+- **Role-based Access**: Granular permission system
+- **API Security**: Rate limiting & request validation
+
+#### 🛡️ Data Protection
+- **Encryption**: Data encrypted in transit dan at rest
+- **Backup Strategy**: Automated daily backups
+- **Audit Logging**: Comprehensive activity logs
+- **Privacy Compliance**: GDPR-ready data handling
+
+#### � Security Monitoring
+- **Real-time Alerts**: Suspicious activity detection
+- **Access Logging**: Complete access trail
+- **Vulnerability Scanning**: Regular security assessments
+- **Incident Response**: Defined response procedures
+
+## 🤝 Contributing
+
+### 💡 Kontribusi Open Source
+
+Kami menyambut kontribusi dari developer dan komunitas untuk kemajuan Portal Nagari Guguak Malalo!
+
+#### 🎯 Cara Berkontribusi
+
+<details>
+<summary>📝 <strong>Documentation & Content</strong></summary>
+
+- **Improve Documentation**: Update README, guides, dan technical docs
+- **Translation**: Terjemahan konten ke bahasa daerah
+- **Content Writing**: Artikel tutorial dan best practices
+- **API Documentation**: Improvement API reference
+- **User Guides**: Panduan penggunaan untuk end users
+
+**How to contribute**:
+1. Fork repository ini
+2. Edit documentation files
+3. Submit Pull Request dengan deskripsi yang jelas
+4. Review dan feedback dari maintainers
+
+</details>
+
+<details>
+<summary>🐛 <strong>Bug Reports & Feature Requests</strong></summary>
+
+- **Bug Reports**: Laporkan bug dengan detail reproduksi
+- **Feature Requests**: Usulkan fitur baru yang bermanfaat
+- **Performance Issues**: Identifikasi bottleneck performance
+- **UI/UX Improvements**: Saran perbaikan user experience
+- **Security Issues**: Report melalui email private
+
+**Bug Report Template**:
+```markdown
+**Bug Description**
+Deskripsi singkat tentang bug
+
+**Steps to Reproduce**
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected Behavior**
+Behavior yang diharapkan
+
+**Screenshots**
+Screenshot jika applicable
+
+**Environment**
+- Browser: [e.g. Chrome, Safari]
+- Version: [e.g. 22]
+- Device: [e.g. Desktop, Mobile]
+```
+
+</details>
+
+<details>
+<summary>🔧 <strong>Code Contributions</strong></summary>
+
+**Note**: Core codebase berada di private repositories untuk security reasons. Kontribusi code dilakukan melalui:
+
+- **External Integrations**: Plugin dan ekstensi third-party
+- **Testing Scripts**: Automated testing dan quality assurance
+- **Deployment Scripts**: Infrastructure dan DevOps improvements
+- **Monitoring Tools**: Performance dan analytics tools
+- **Public Utils**: Utility libraries yang bisa dipublic
+
+**Contribution Process**:
+1. Discuss proposed changes via Issues
+2. Get approval dari core team
+3. Implement di development environment
+4. Submit detailed proposal dengan documentation
+5. Code review dan testing oleh team
+6. Integration ke main codebase
+
+</details>
+
+#### 📋 Development Guidelines
+
+**Code Standards**:
+- **TypeScript**: Strict mode untuk type safety
+- **ESLint**: Follow Next.js dan React best practices
+- **Prettier**: Consistent code formatting
+- **Conventional Commits**: Standardized commit messages
+- **Documentation**: Comprehensive inline comments
+
+**Commit Message Format**:
+```
+type(scope): description
+
+[optional body]
+
+[optional footer(s)]
+```
+
+**Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+
+**Examples**:
+```bash
+feat(auth): add multi-factor authentication
+fix(api): resolve user registration bug
+docs(readme): update installation guide
+```
+
+#### 🌟 Recognition
+
+Contributors akan mendapat recognition melalui:
+- **Contributors List**: Listed di README dan website
+- **Certificate**: Digital certificate untuk significant contributions
+- **Networking**: Join developer community Nagari Guguak Malalo
+- **References**: Portfolio reference untuk career development
+
+## 📞 Kontak
+
+### 🏛️ Tim Pengembang
+
+| Role | Name | Contact |
+|------|------|---------|
+| **Project Lead** | Tim IT Nagari Guguak Malalo | tech@guguakmalalo.id |
+| **Technical Lead** | [Lead Developer] | developer@guguakmalalo.id |
+| **UI/UX Designer** | [Designer Name] | design@guguakmalalo.id |
+| **Community Manager** | [Community Lead] | community@guguakmalalo.id |
+
+### 📧 Kontak Resmi
+
+- **📧 Email Teknis**: tech@guguakmalalo.id
+- **📧 Email Umum**: info@guguakmalalo.id
+- **📞 Telepon**: +62 XXX-XXXX-XXXX
+- **📍 Alamat**: Kantor Wali Nagari Guguak Malalo, Kec. Lima Kaum, Kab. Tanah Datar
+
+### 🌐 Social Media & Community
+
+- **🌐 Website**: https://guguakmalalo.id *(Coming Soon)*
+- **📘 Facebook**: Nagari Guguak Malalo Official
+- **📸 Instagram**: @nagari_guguakmalalo
+- **💬 WhatsApp**: [Admin Nagari]
+- **📺 YouTube**: Nagari Guguak Malalo Channel
+
+### 🐛 Bug Reports & Support
+
+**Public Issues**: 
+- Gunakan [GitHub Issues](https://github.com/Ryan-infitech/Preview-Frontend-Nagari-Guguak-Malalo/issues) untuk bug reports dan feature requests
+
+**Security Issues**: 
+- Email langsung ke: security@guguakmalalo.id
+- **Jangan** post security issues di public repository
+
+**General Support**:
+- Documentation: Check dokumentasi lengkap terlebih dahulu
+- Community: Join komunitas developer lokal
+- Email Support: support@guguakmalalo.id
+
+### 💼 Kerjasama & Partnership
+
+Kami terbuka untuk kerjasama dengan:
+- **Developer Communities**: Komunitas programmer lokal
+- **Educational Institutions**: Universitas dan sekolah untuk learning projects
+- **Government Agencies**: Kolaborasi antar pemerintah daerah
+- **Private Companies**: Partnership untuk development dan maintenance
+
+**Partnership Inquiry**: partnership@guguakmalalo.id
+
+## 📄 Lisensi
+
+### 📜 MIT License
+
+Portal Nagari Guguak Malalo menggunakan **MIT License** untuk memungkinkan penggunaan dan kontribusi yang luas sambil tetap melindungi hak cipta.
+
+```
+MIT License
+
+Copyright (c) 2024 Nagari Guguak Malalo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### 🔒 Additional Terms
+
+**Open Source Components**: Project ini menggunakan berbagai open source libraries. License lengkap tersedia di file `LICENSE` dan `package.json`.
+
+**Asset Usage**: Logo, gambar, dan konten yang berkaitan dengan Nagari Guguak Malalo tetap menjadi hak cipta pemerintah nagari.
+
+**Commercial Use**: Diizinkan untuk tujuan educational dan development dengan attribution yang proper.
+
+---
+
+<div align="center">
+
+### 🏛️ Portal Nagari Guguak Malalo
+
+**Membangun Desa Digital yang Maju dan Berkeadilan**
+
+*Dikembangkan dengan ❤️ untuk kemajuan Nagari Guguak Malalo*
+
+**🌟 Star this repository jika project ini bermanfaat!**
+
+</div>
