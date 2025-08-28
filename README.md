@@ -1,3 +1,9 @@
+<div align="right">
+
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Ryan-infitech.Nagari-Guguak-Malalo-WebApp)
+
+</div>
+
 # 🏛️ Portal Nagari Guguak Malalo
 
 <div align="center">
