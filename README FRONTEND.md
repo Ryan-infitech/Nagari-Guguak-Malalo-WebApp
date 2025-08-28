@@ -17,7 +17,7 @@
 
 <div align="center">
 
-![gif preview](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/preview.gif?raw=true)
+<img src="https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/preview.gif?raw=true" alt="gif preview">
 
 </div>
 
