@@ -1,7 +1,7 @@
 # 🏛️ Portal Nagari Guguak Malalo
 
 <div align="center">
-  <img src="./public/logofixnagari.png" alt="Logo Nagari Guguak Malalo" width="200"/>
+  <img src="https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/Logofixnagari.png?raw=true" alt="Logo Nagari Guguak Malalo" width="200"/>
   
   **Portal Digital Resmi Nagari Guguak Malalo**  
   *Sistem Informasi Pelayanan Publik Digital*
@@ -66,13 +66,10 @@ Portal ini menyediakan ekosistem layanan digital lengkap:
 
 ### 🔐 Sistem Autentikasi & Keamanan
 - **JWT Authentication**: Token-based authentication dengan refresh token otomatis
-- **Role-Based Access Control**: 7 level user dengan permission yang granular
-  - `SUPER_ADMIN` - Full system access
+- **Role-Based Access Control**: 4 level user dengan permission yang granular
   - `ADMIN` - Administrative privileges
-  - `MODERATOR` - Content moderation
   - `STAFF` - Limited admin access
   - `RESIDENT` - Citizen portal access
-  - `BUSINESS_OWNER` - UMKM features
   - `VISITOR` - Public access only
 - **Advanced Security**: Rate limiting, CORS protection, security headers
 - **Session Management**: Secure session handling dengan enkripsi data
@@ -306,14 +303,16 @@ Project ini menggunakan **multi-repository approach** untuk better scalability:
 
 Portal akan tersedia dalam beberapa environment:
 
-- **🌐 Production**: `https://portal.guguakmalalo.id` *(Coming Soon)*
-- **🧪 Staging**: `https://staging.guguakmalalo.id` *(Coming Soon)*
-- **📱 Mobile Demo**: PWA-enabled untuk pengalaman mobile optimal
+- **🌐 Production**: `https://guguakmalalo.id` 
+- **🧪 Staging**: `https://preview-nagari-guguakmalalo.vercel.app/` 
+- **📱 Mobile Demo**: PWA-enabled untuk pengalaman mobile optimal https://guguakmalalo.id
 
 ### 📸 Screenshots Preview
 
 <details>
 <summary>🏠 <strong>Homepage & Public Pages</strong></summary>
+
+![home](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/home.png?raw=true)
 
 - **Hero Section**: Informasi utama dengan quick access ke layanan
 - **News Section**: Berita terkini dan pengumuman resmi
@@ -326,6 +325,8 @@ Portal akan tersedia dalam beberapa environment:
 <details>
 <summary>👥 <strong>Portal Warga (Citizen Dashboard)</strong></summary>
 
+![residentportal](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/residentportal.png?raw=true)
+
 - **Personal Dashboard**: Overview layanan dan status dokumen
 - **Document Request**: Form pengajuan surat dan dokumen
 - **Service History**: Riwayat penggunaan layanan
@@ -336,6 +337,8 @@ Portal akan tersedia dalam beberapa environment:
 
 <details>
 <summary>🏛️ <strong>Admin Dashboard</strong></summary>
+
+![admin](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/adminportal.png?raw=true)
 
 - **Analytics Dashboard**: Statistik komprehensif penggunaan portal
 - **Content Management**: Pengelolaan artikel, pengumuman, event
@@ -348,6 +351,8 @@ Portal akan tersedia dalam beberapa environment:
 <details>
 <summary>🏪 <strong>UMKM Platform</strong></summary>
 
+![umkm](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/umkm.png?raw=true)
+
 - **Business Registration**: Formulir pendaftaran UMKM
 - **Product Catalog**: Showcase produk dengan foto dan deskripsi
 - **Analytics**: Statistik performa bisnis dan engagement
@@ -358,6 +363,8 @@ Portal akan tersedia dalam beberapa environment:
 
 <details>
 <summary>🏖️ <strong>Tourism Platform</strong></summary>
+
+![tourism](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/tourism.png?raw=true)
 
 - **Interactive Maps**: Peta destinasi wisata dengan geolocation
 - **Photo Gallery**: Galeri foto high-quality destinasi
@@ -370,6 +377,8 @@ Portal akan tersedia dalam beberapa environment:
 ### 📱 Mobile Experience
 
 Portal dioptimalkan untuk pengalaman mobile yang excellent:
+
+![mobile](https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/mobile.png?raw=true)
 
 - **📱 Responsive Design**: Adaptif untuk semua ukuran layar
 - **⚡ Fast Loading**: Optimized untuk koneksi lambat
@@ -673,24 +682,24 @@ Contributors akan mendapat recognition melalui:
 
 | Role | Name | Contact |
 |------|------|---------|
-| **Project Lead** | Tim IT Nagari Guguak Malalo | tech@guguakmalalo.id |
-| **Technical Lead** | [Lead Developer] | developer@guguakmalalo.id |
-| **UI/UX Designer** | [Designer Name] | design@guguakmalalo.id |
-| **Community Manager** | [Community Lead] | community@guguakmalalo.id |
+| **Project Lead** | Tim IT Nagari Guguak Malalo | ryanseptiawan@student.unp.ac.id |
+| **Technical Lead** | [Lead Developer] | ryan.septiawan0115@gmail.com |
+| **UI/UX Designer** | [Designer Name] | rianseptiawan2023@gmail.com |
+| **Community Manager** | [Community Lead] | ryanseptiawan@student.unp.ac.id |
 
 ### 📧 Kontak Resmi
 
-- **📧 Email Teknis**: tech@guguakmalalo.id
-- **📧 Email Umum**: info@guguakmalalo.id
-- **📞 Telepon**: +62 XXX-XXXX-XXXX
-- **📍 Alamat**: Kantor Wali Nagari Guguak Malalo, Kec. Lima Kaum, Kab. Tanah Datar
+- **📧 Email Teknis**: ryanseptiawan@student.unp.ac.id
+- **📧 Email Umum**: ryan.septiawan0115@gmail.com
+- **📞 Telepon**: +62 851 5751 7798
+- **📍 Alamat**: Ft.unp Jalan Prof. Dr. Hamka, Air Tawar Padang, Sumatera Barat
 
 ### 🌐 Social Media & Community
 
-- **🌐 Website**: https://guguakmalalo.id *(Coming Soon)*
-- **📘 Facebook**: Nagari Guguak Malalo Official
-- **📸 Instagram**: @nagari_guguakmalalo
-- **💬 WhatsApp**: [Admin Nagari]
+- **🌐 Website**: https://guguakmalalo.id 
+- **📘 Facebook**: @pemerintahnagariguguakmalalo
+- **📸 Instagram**: @pemerintahnagariguguakmalalo
+- **💬 WhatsApp**: [+62 851 5751 7798]
 - **📺 YouTube**: Nagari Guguak Malalo Channel
 
 ### 🐛 Bug Reports & Support
@@ -715,7 +724,7 @@ Kami terbuka untuk kerjasama dengan:
 - **Government Agencies**: Kolaborasi antar pemerintah daerah
 - **Private Companies**: Partnership untuk development dan maintenance
 
-**Partnership Inquiry**: partnership@guguakmalalo.id
+**Partnership Inquiry**: ryan.septiawan0115@gmail.com
 
 ## 📄 Lisensi
 
