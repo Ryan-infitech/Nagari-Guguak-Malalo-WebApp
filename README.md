@@ -24,6 +24,12 @@
 
 ---
 
+<div align="center">
+
+<img src="https://github.com/Ryan-infitech/Nagari-Guguak-Malalo-WebApp/blob/main/public/ss/preview.gif?raw=true" width="1138" heigh="640" alt="gif preview">
+
+</div>
+
 ## 📋 Daftar Isi
 
 - [🎯 Overview](#-overview)
